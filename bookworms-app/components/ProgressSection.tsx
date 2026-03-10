@@ -24,7 +24,7 @@ export default function ProgressSection({ milestone, books, currentTotal, reward
     : null;
 
   const completedDate = isComplete
-    ? books[milestone.target - 1]?.finished_on ?? null
+    ? books[books.length - 1]?.finished_on ?? null
     : null;
 
   return (
