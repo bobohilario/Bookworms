@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Next.js
+bookworms-app/.next/
+bookworms-app/out/
+bookworms-app/build/
+
+# Dependencies
+bookworms-app/node_modules/
+
+# SQLite database
+bookworms-app/data/
+
+# Claude local settings
+.claude/
+
+# Env files
+bookworms-app/.env*
+
+# Debug logs
+bookworms-app/npm-debug.log*
+bookworms-app/yarn-debug.log*
+bookworms-app/.pnpm-debug.log*
+
+# TypeScript
+bookworms-app/next-env.d.ts
+bookworms-app/*.tsbuildinfo
+
+# Wolfram
+*.nb

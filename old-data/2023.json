@@ -1,0 +1,2058 @@
+[
+	{
+		"Reader":"Laura",
+		"Title":"The Nature of the Beast",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-05-29T04:30:17"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The island of missing trees ",
+		"Author":"Elif shafak",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-05-29T07:11:28"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A Curse So Dark and Lonely",
+		"Author":"Brigid Kemmerer",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-05-30T00:07:40"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Tomorrow and Tomorrow and Tomorrow",
+		"Author":"Gabrielle Zevin",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-05-30T07:33:28"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Mason &amp; Dixon",
+		"Author":"Thomas Pynchon",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-05-30T08:44:25"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"Circe ",
+		"Author":"Madeline Miller",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-05-31T00:18:49"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"River Sing Me Home",
+		"Author":"Eleanor Shearer",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-01T09:33:00"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A Psalm for the Wild-Built",
+		"Author":"Becky Chambers",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-01T16:09:35"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Making of Another Major Motion Picture Masterpiece ",
+		"Author":"Tom Hanks",
+		"Suggestor":"Schuster ",
+		"Stars":2,
+		"Timestamp":"2023-06-01T19:54:26"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"An Olive Grove in Ends",
+		"Author":"Moses McKenzie",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-02T10:16:59"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"Lord of Chaos",
+		"Author":"Robert Jordan",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-02T12:19:15"
+	},
+	{
+		"Reader":"Claire",
+		"Title":"Set On You",
+		"Author":"Amy Lea",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-02T18:12:08"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"What Happened to Ruthie Ramirez",
+		"Author":"Claire Jimenez",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-03T02:55:28"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Romantic Comedy",
+		"Author":"Curtis Sittenfeld",
+		"Suggestor":"Schuster",
+		"Stars":4,
+		"Timestamp":"2023-06-03T11:40:14"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"The Power",
+		"Author":"Naomi Alderman",
+		"Suggestor":"Laura",
+		"Stars":4,
+		"Timestamp":"2023-06-03T15:37:14"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Fourth Wing",
+		"Author":"Rebecca Yarros",
+		"Suggestor":"Meg",
+		"Stars":4,
+		"Timestamp":"2023-06-03T15:38:19"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Mr. Brown Can Moo, Can You?",
+		"Author":"Dr. Suess (as rapped by Jordan Simons)",
+		"Suggestor":"Dudley",
+		"Stars":5,
+		"Timestamp":"2023-06-03T15:58:32"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Mr. Brown Can Moo. Can you? ",
+		"Author":"Dr. Suess (as rapped by Jordan Simons)",
+		"Suggestor":"Dudley",
+		"Stars":5,
+		"Timestamp":"2023-06-03T18:00:09"
+	},
+	{
+		"Reader":"Stephanie Herbers",
+		"Title":"Mr. Brown Can Moo. Can You?",
+		"Author":"Dr. Seuss (as rapped by Jordan Simons)",
+		"Suggestor":"Dudley",
+		"Stars":5,
+		"Timestamp":"2023-06-03T18:00:11"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Kings of the Wyld ",
+		"Author":"Nicholas Eames",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-03T23:35:10"
+	},
+	{
+		"Reader":"Stephanie ",
+		"Title":"The Ruthless Lady’s Guide to Wizardry",
+		"Author":"CM Waggoner",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-03T23:50:21"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"People We Meet on Vacation",
+		"Author":"Emily Henry",
+		"Suggestor":" ",
+		"Stars":3,
+		"Timestamp":"2023-06-04T13:39:54"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"An Ember in the Ashes",
+		"Author":"Sabaa Tahir",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-04T17:20:18"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Here to Stay",
+		"Author":"Adrianna Herrera ",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-04T17:21:46"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Mr. Brown can Moo. Can you?",
+		"Author":"Dr. Seuss (as rapped by Jordan Simons)",
+		"Suggestor":"Dudley",
+		"Stars":5,
+		"Timestamp":"2023-06-04T17:24:06"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Dust",
+		"Author":"Hugh howey",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-04T17:46:53"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"One Billion Americans",
+		"Author":"Matthew Yglesias",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-04T20:28:49"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Artificial Condition",
+		"Author":"Martha Wells",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-04T22:57:16"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Rogue Protocol ",
+		"Author":"Martha Wells",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-05T17:06:14"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Yellowface",
+		"Author":"R. F. Kuang",
+		"Suggestor":"Schuster",
+		"Stars":3,
+		"Timestamp":"2023-06-05T20:36:46"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Exit Strategy ",
+		"Author":"Martha Wells",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-05T23:10:44"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"I Can Make This Promise ",
+		"Author":"Christine Day",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-06T00:37:59"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Night of the Living Rez",
+		"Author":"Morgan Talty",
+		"Suggestor":"The Internet",
+		"Stars":4,
+		"Timestamp":"2023-06-07T08:47:51"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Salty: Lessons on Eating, Drinking, and Living from Revolutionary Women",
+		"Author":"Alissa Wilkinson",
+		"Suggestor":"Schuster",
+		"Stars":3,
+		"Timestamp":"2023-06-07T23:38:56"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"A Touch Against the Night",
+		"Author":"Sabaa Tahir",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-08T09:49:57"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Night Ship",
+		"Author":"Jess Kidd",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-08T09:50:45"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"No Country for Old Men",
+		"Author":"Cormac McCarthy",
+		"Suggestor":"Me. It was me.",
+		"Stars":5,
+		"Timestamp":"2023-06-08T10:37:29"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Wrong Place Wrong Time",
+		"Author":"Gillian McAllister",
+		"Suggestor":"Schuster",
+		"Stars":3,
+		"Timestamp":"2023-06-08T17:02:00"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Network Effect",
+		"Author":"Martha Wells",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-08T17:18:23"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"A Visit from the Goon Squad",
+		"Author":"Jennifer Egan",
+		"Suggestor":"-",
+		"Stars":5,
+		"Timestamp":"2023-06-09T16:12:35"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"A Great Reckoning",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-09T21:48:39"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"House of Beating Wings",
+		"Author":"Olivia Wildenstein",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-09T22:09:50"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"How Far the Light Reaches",
+		"Author":"Sabrina Imbler",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-10T17:23:22"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"The Power",
+		"Author":"Naomi Alderman",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-10T23:15:40"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"All Systems Red: The Murderbot Diaries ",
+		"Author":"Martha Wells",
+		"Suggestor":"Greta of Nerdetta (not a Shawtie but I like to pretend she’s my pal)",
+		"Stars":3,
+		"Timestamp":"2023-06-11T16:25:25"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Something Wild and Wonderful",
+		"Author":"Anita Kelly",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-11T22:33:41"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"House of Pounding Hearts",
+		"Author":"Olivia Wildenstein",
+		"Suggestor":"-",
+		"Stars":2,
+		"Timestamp":"2023-06-11T22:52:19"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"Fourth Wing",
+		"Author":"Rebecca Yarros",
+		"Suggestor":"Meg",
+		"Stars":4,
+		"Timestamp":"2023-06-12T11:16:10"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A Dance with the Fae Prince",
+		"Author":"Elise Kova ",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-13T17:51:52"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"They're Going to Love You",
+		"Author":"Meg Howrey",
+		"Suggestor":"Me me me ",
+		"Stars":4,
+		"Timestamp":"2023-06-13T18:14:05"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Murderbot Diaries: All Systems Red",
+		"Author":"Martha Wells",
+		"Suggestor":"Ashley and Meg",
+		"Stars":4,
+		"Timestamp":"2023-06-13T19:14:25"
+	},
+	{
+		"Reader":"Claire",
+		"Title":"Happy Place",
+		"Author":"Emily Henry",
+		"Suggestor":"N\/A",
+		"Stars":4,
+		"Timestamp":"2023-06-14T03:37:16"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Daisy Jones and the Six",
+		"Author":"Taylor Jenkins Reid",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-14T21:03:46"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"Ataturk",
+		"Author":"Austin Bay",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-14T21:50:29"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Love, Theoretically ",
+		"Author":"Ali Hazelwood",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-15T16:26:58"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Long Way Home",
+		"Author":"Louise Penny ",
+		"Suggestor":"Me! And I’ve strong armed everyone else into reading the Gamache series. Yay for book 10! ",
+		"Stars":3,
+		"Timestamp":"2023-06-15T18:54:04"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"The Candy House",
+		"Author":"Jennifer Egan",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-16T11:02:26"
+	},
+	{
+		"Reader":"Stephanie ",
+		"Title":"Weyward",
+		"Author":"Emilia Hart",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-16T12:31:31"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Britt-Marie Was Here",
+		"Author":"Fredrik Backman",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-17T22:08:23"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"21 Lessons for the 21st Century",
+		"Author":"Yuval Noah Harari",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-18T08:54:26"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"In Cold Blood",
+		"Author":"Truman Capote",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-18T09:23:59"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"Circe",
+		"Author":"Madeline Miller",
+		"Suggestor":"Cat",
+		"Stars":3,
+		"Timestamp":"2023-06-18T09:25:27"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Senlin Ascends ",
+		"Author":"Josiah Bancroft",
+		"Suggestor":"-",
+		"Stars":3,
+		"Timestamp":"2023-06-18T21:12:47"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The House of Eve",
+		"Author":"Sadeqa Johnson",
+		"Suggestor":"Me!",
+		"Stars":3,
+		"Timestamp":"2023-06-19T14:03:40"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"Big Swiss",
+		"Author":"Jen Beagin ",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-19T21:02:25"
+	},
+	{
+		"Reader":"Annie ",
+		"Title":"The Atlas Paradox",
+		"Author":"Olivie Blake",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-19T23:37:49"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"A Marvellous Light",
+		"Author":"Freya marske",
+		"Suggestor":"Probably meg?",
+		"Stars":4,
+		"Timestamp":"2023-06-20T07:40:48"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"The Swedish Art of Aging Exuberantly: Life Wisdom from Someone Who Will (Probably) Die Before You (The Swedish Art of Living & Dying Series)",
+		"Author":"Margareta Magnusson",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-20T12:56:03"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Better the Blood",
+		"Author":"Michael Bennett",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-21T17:30:44"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"The Arsonists’ City",
+		"Author":"Hala Alyan",
+		"Suggestor":"Good question",
+		"Stars":4,
+		"Timestamp":"2023-06-21T23:33:07"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"A Reaper at the Gates",
+		"Author":"Sabaa Tahir",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-22T21:50:26"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The People of Sparks",
+		"Author":"Jeanne DuPrau",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-22T21:51:23"
+	},
+	{
+		"Reader":"Annie ",
+		"Title":"The Last Cuentista",
+		"Author":"Donna Barba Higuera",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-22T22:52:21"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"Our Best Intentions ",
+		"Author":"Vibhuti Jain",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-23T12:31:29"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Starless Crown",
+		"Author":"James Rollins",
+		"Suggestor":"-",
+		"Stars":1,
+		"Timestamp":"2023-06-23T16:57:50"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"The Long Way to a Small, Angry Planet",
+		"Author":"Becky Chambers",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-25T16:31:00"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"Emily Wilde’s Encyclopaedia of Faeries",
+		"Author":"Heather Fawcett",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-25T15:59:30"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"The Lincoln Highway",
+		"Author":"Amor Towles",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-25T20:35:00"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"A Crown of Swords",
+		"Author":"Robert Jordan",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-25T22:56:28"
+	},
+	{
+		"Reader":"Meg",
+		"Title":" Cod: A Biography of the Fish that Changed the World",
+		"Author":"Mark Kurlansky",
+		"Suggestor":"-",
+		"Stars":3,
+		"Timestamp":"2023-06-26T20:24:44"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A Duel with the Vampire Lord",
+		"Author":"Elise Kova",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-06-26T21:44:13"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"A Psalm for the Wild-Built",
+		"Author":"Becky Chambers",
+		"Suggestor":"Meg",
+		"Stars":4,
+		"Timestamp":"2023-06-27T22:54:04"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Other People’s Houses",
+		"Author":"Abbi Waxman",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-06-27T22:54:52"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Lady Tan's Circle of Women",
+		"Author":"Lisa See",
+		"Suggestor":"Me!",
+		"Stars":4,
+		"Timestamp":"2023-06-28T13:41:52"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"The Long Way to a Small, Angry Planet",
+		"Author":"Becky Chambers ",
+		"Suggestor":"Cat",
+		"Stars":3,
+		"Timestamp":"2023-06-29T18:25:32"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Chain-Gang All-Stars",
+		"Author":"Nana Kwame Adjei-Brenyah",
+		"Suggestor":"…",
+		"Stars":5,
+		"Timestamp":"2023-06-30T00:08:05"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Three Escapes of Hannah Arendt: A Tyranny of Truth",
+		"Author":"Ken Krimstein",
+		"Suggestor":"Me!",
+		"Stars":3,
+		"Timestamp":"2023-06-30T09:22:58"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Thursday Murder Club",
+		"Author":"Richard Osman",
+		"Suggestor":"Me!",
+		"Stars":4,
+		"Timestamp":"2023-06-30T10:02:41"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Air Awakens ",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-30T14:33:31"
+	},
+	{
+		"Reader":"Jane ",
+		"Title":"The Wild Robot",
+		"Author":"Peter Brown",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-30T15:35:23"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Greek Myths",
+		"Author":"Jean Menzies",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-30T15:40:23"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Demon Copperhead",
+		"Author":"Barbara Kingsolver",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-06-30T22:02:32"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"The Forerunner",
+		"Author":"Cori Bush",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-30T23:19:57"
+	},
+	{
+		"Reader":"Annie ",
+		"Title":"Over the Top",
+		"Author":"Jonathan Van Ness",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-06-30T23:55:11"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"A Closed and Common Orbit",
+		"Author":"Becky Chambers",
+		"Suggestor":"Emily and others :)",
+		"Stars":5,
+		"Timestamp":"2023-07-01T12:43:08"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Lost Hero",
+		"Author":"Rick Riordan",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-01T18:07:54"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"Community Board",
+		"Author":"Tara Conklin",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-07-02T06:42:14"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Bury Your Dead",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-02T10:23:30"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Razorblade Tears",
+		"Author":"S.A. Cosby",
+		"Suggestor":"Debra from work ",
+		"Stars":4,
+		"Timestamp":"2023-07-02T10:25:35"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Measure",
+		"Author":"Nikki Erlick ",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-02T10:26:31"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"A Trick of the Light",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-02T10:28:19"
+	},
+	{
+		"Reader":"Emily ",
+		"Title":"Demon Copperhead",
+		"Author":"Barbara Kingsolver",
+		"Suggestor":"Pulitzer foundation",
+		"Stars":5,
+		"Timestamp":"2023-07-02T12:22:27"
+	},
+	{
+		"Reader":"Blaire ",
+		"Title":"Bury Your Dead",
+		"Author":"Louise Penny",
+		"Suggestor":"Schuster",
+		"Stars":4,
+		"Timestamp":"2023-07-02T16:57:40"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Fire Falling",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-02T20:20:10"
+	},
+	{
+		"Reader":"Josh Schum",
+		"Title":"Demon Copperhead",
+		"Author":"Barbara Kingsolver",
+		"Suggestor":"Mary Schum",
+		"Stars":5,
+		"Timestamp":"2023-07-04T10:16:19"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"Ink Blood Sister Scribe",
+		"Author":"Emma Törzs",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-04T12:48:20"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Earth’s End",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-04T18:47:39"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Celebrants",
+		"Author":"Steven Rowley",
+		"Suggestor":"Me, unfortunately ",
+		"Stars":2,
+		"Timestamp":"2023-07-05T20:35:09"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Artificial Condition: The Murderbot Diaries",
+		"Author":"Martha Wells",
+		"Suggestor":"series, so book one?",
+		"Stars":3,
+		"Timestamp":"2023-07-06T11:49:54"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Glass Houses",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-06T11:51:08"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"I’m Glad My Mom Died",
+		"Author":"Jennette McCurdy",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-06T18:22:45"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Water’s Wrath",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-06T19:30:37"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Rogue Protocol",
+		"Author":"Martha Wells",
+		"Suggestor":"Still me ",
+		"Stars":3,
+		"Timestamp":"2023-07-07T11:24:15"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"The Power",
+		"Author":"Naomi Alderman",
+		"Suggestor":"Cat",
+		"Stars":3,
+		"Timestamp":"2023-07-07T17:02:07"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Crystal Crowned",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-07T18:14:14"
+	},
+	{
+		"Reader":"Philip ",
+		"Title":"Parable of the Sower ",
+		"Author":"Octavia E. Butler",
+		"Suggestor":"Cat",
+		"Stars":4,
+		"Timestamp":"2023-07-07T20:20:34"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Are You There, God? It’s Me, Margaret. ",
+		"Author":"Judy Blume",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-08T13:02:56"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Crave",
+		"Author":"Tracy Wolff",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-07-08T23:48:39"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Secret Book of Flora Lea",
+		"Author":"Patti Callahan Henry",
+		"Suggestor":"Me",
+		"Stars":4,
+		"Timestamp":"2023-07-09T18:46:36"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Babel: An Arcane History",
+		"Author":"R. F. Kuang",
+		"Suggestor":"A barn friend",
+		"Stars":2,
+		"Timestamp":"2023-07-09T17:15:17"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A Prayer for the Crown Shy",
+		"Author":"Becky Chambers",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-09T21:03:19"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Love That Story ",
+		"Author":"Jonathan Van Ness",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-10T22:37:38"
+	},
+	{
+		"Reader":"Mary ",
+		"Title":"The Thursday Murder Club",
+		"Author":"Richard Osman",
+		"Suggestor":"Ashley",
+		"Stars":5,
+		"Timestamp":"2023-07-11T18:54:38"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Seven Days in June",
+		"Author":"Tia Williams",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-11T18:55:28"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Liar’s Club",
+		"Author":"Mary Karr",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-11T18:56:08"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"They're Going to Love You",
+		"Author":"Meh Howrey",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-11T21:30:06"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"The Very Secret Society of Irregular Witches",
+		"Author":"Sangu Mandanna",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-11T22:07:54"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"Record of a Spaceborn Few",
+		"Author":"Becky Chambers",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-11T23:59:24"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The Rival Queens",
+		"Author":"Fidelis Morgan",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-07-12T16:49:07"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Ship of Brides",
+		"Author":"Jojo Moyes",
+		"Suggestor":"Stephanie",
+		"Stars":3,
+		"Timestamp":"2023-07-12T20:03:43"
+	},
+	{
+		"Reader":"Meg",
+		"Title":" What It's Like to Be a Dog: And Other Adventures in Animal Neuroscience",
+		"Author":"Gregory Berns",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-12T18:30:04"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Only Killers and Thieves",
+		"Author":"Paul Howarth",
+		"Suggestor":"???",
+		"Stars":4,
+		"Timestamp":"2023-07-12T23:34:39"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Feed",
+		"Author":"Mira Grant",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-13T13:14:08"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"A restless truth",
+		"Author":"Freya marske",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-15T10:56:50"
+	},
+	{
+		"Reader":"Stephanie ",
+		"Title":"One Dark Window",
+		"Author":"Rachel Gillig",
+		"Suggestor":"Meg",
+		"Stars":5,
+		"Timestamp":"2023-07-16T08:12:09"
+	},
+	{
+		"Reader":"Meg ",
+		"Title":"Role Playing",
+		"Author":"Cathy Yardley",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-16T21:17:36"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"Lessons in Chemistry ",
+		"Author":"Bonnie Garmus",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-17T05:40:50"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Deep",
+		"Author":"Rivers Solomon",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-07-17T20:16:52"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"No Two Persons",
+		"Author":"Erica Bauermeister",
+		"Suggestor":"Me ",
+		"Stars":3,
+		"Timestamp":"2023-07-17T20:18:18"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Soulmate",
+		"Author":"Sally Hepworth ",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-17T23:27:43"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Dust Off the Bones",
+		"Author":"Paul Howarth",
+		"Suggestor":"Paul Howarth",
+		"Stars":4,
+		"Timestamp":"2023-07-18T08:25:39"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Deep",
+		"Author":"Rivers Solomon",
+		"Suggestor":"Schuster",
+		"Stars":3,
+		"Timestamp":"2023-07-18T19:19:46"
+	},
+	{
+		"Reader":"Steve",
+		"Title":"The Deep",
+		"Author":"Rivers Solomon",
+		"Suggestor":"Ashley",
+		"Stars":2,
+		"Timestamp":"2023-07-18T20:31:49"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Did Ye Hear Mammy Died? A Memoir",
+		"Author":"Seamas O'Reilly",
+		"Suggestor":"Me ",
+		"Stars":4,
+		"Timestamp":"2023-07-19T12:45:22"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Wolfsong",
+		"Author":"TJ Klune ",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-19T18:07:33"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Wool",
+		"Author":"Hugh Howey",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-20T15:21:13"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Very Secret Society of Irregular Witches",
+		"Author":"Sangu Mandanna",
+		"Suggestor":"Stephanie, indirectly ",
+		"Stars":4,
+		"Timestamp":"2023-07-20T22:32:30"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Humans: A Novel",
+		"Author":"Matt Haig",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-22T12:57:54"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"Small Things Like These",
+		"Author":"Claire Keegan",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-22T21:41:28"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Love on the Brain",
+		"Author":"Ali Hazelwood",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-23T20:17:09"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"In the Lives of Puppets",
+		"Author":"TJ Klune",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-23T23:20:00"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"Someone Else's Bucket List",
+		"Author":"Amy Matthews",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-24T04:49:39"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Our Oldest Conpanions",
+		"Author":"Pat Shipman",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-24T13:06:36"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Our Oldest Companions: The Story of the First Dogs",
+		"Author":"Pat Shipman",
+		"Suggestor":"Meg",
+		"Stars":3,
+		"Timestamp":"2023-07-24T13:09:20"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"We Have Always Lived in the Castle",
+		"Author":"Shirley Jackson",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-07-24T19:37:16"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Vortex Visions",
+		"Author":"Elisa Kova",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-25T21:44:09"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"All the Sinners Bleed",
+		"Author":"S.A. Cosby",
+		"Suggestor":"?",
+		"Stars":5,
+		"Timestamp":"2023-07-25T22:23:20"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"My Murder",
+		"Author":"Katie Williams ",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-27T23:35:31"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Kingdom of the Blind",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-28T16:32:49"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"The Summer I Turned Pretty",
+		"Author":"Jenny Han",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-28T20:40:43"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"A Portrait of an Artist is a Young Man",
+		"Author":"James Joyce",
+		"Suggestor":"Culture and History",
+		"Stars":3,
+		"Timestamp":"2023-07-28T21:41:14"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"A Sky Beyond the Storm",
+		"Author":"Sabaa Tahir",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-29T14:45:33"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Even As We Breathe",
+		"Author":"Annette Saunooke Clapsaddle",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-30T08:02:54"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Great Believers",
+		"Author":"Rebecca Makkai",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-07-30T22:40:28"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"A Trick of the Light",
+		"Author":"Louise Penny",
+		"Suggestor":"Schuster",
+		"Stars":4,
+		"Timestamp":"2023-07-30T22:52:33"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"It's Not Summer Without You",
+		"Author":"Jenny Han",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-31T05:11:40"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"We'll Always Have Summer",
+		"Author":"Jenny Han",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-07-31T05:12:13"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Chosen Champion ",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-01T15:11:49"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Failed Future ",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-02T16:07:41"
+	},
+	{
+		"Reader":"Stephanie ",
+		"Title":"The London Seance Society",
+		"Author":"Sarah Penner",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-02T17:15:02"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Seven Year Slip",
+		"Author":"Ashley Poston ",
+		"Suggestor":"Me",
+		"Stars":4,
+		"Timestamp":"2023-08-02T22:38:58"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Immortality - A Love Story",
+		"Author":"Dana Schwartz",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-03T10:52:46"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Eileen",
+		"Author":"Ottessa moshfegh",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-08-03T12:31:17"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Sovereign Sacrifice ",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-03T14:55:03"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Crystal Caged",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-03T18:53:10"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"The WEIRDest People in the World",
+		"Author":"Joseph Henrich",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-03T20:44:40"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Love Wager",
+		"Author":"Lynn Painter",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-03T23:55:15"
+	},
+	{
+		"Reader":"Blaire ",
+		"Title":"Romantic Comedy",
+		"Author":"Curtis Sittenfeld",
+		"Suggestor":"Schuster",
+		"Stars":5,
+		"Timestamp":"2023-08-04T09:57:29"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Bonded by Thorns",
+		"Author":"Elizabeth Helen",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-04T22:05:51"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"The Galaxy and the Ground Within",
+		"Author":"Becky Chambers",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-05T00:03:16"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Wings of Fire: The Lost Continent",
+		"Author":"Tui Sutherland",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-05T08:33:38"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Hello Beautiful",
+		"Author":"Ann Napolitano",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-05T12:38:49"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Woven by Gold",
+		"Author":"Elizabeth Helen",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-05T18:46:06"
+	},
+	{
+		"Reader":"Thomas",
+		"Title":"Baby Monkey: Private Eye",
+		"Author":"Brian Selznick and David Serlin",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-06T11:21:58"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Cruel Beauty",
+		"Author":"Rosamund Hodge",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-08-06T11:25:24"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Fat Talk: Parenting in the Age of Diet Culture",
+		"Author":"Virginia Sole-Smith",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-06T11:51:00"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"You Could Make This Place Beautiful ",
+		"Author":"Maggie Smith",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-08-06T15:09:47"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Last Summer at the Golden Hotel",
+		"Author":"Elyssa Friedland",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-08-06T21:03:21"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Worst Wedding Date",
+		"Author":"Pippa Grant",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-06T22:19:50"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Chain Gang All Stars",
+		"Author":"Nana Kwame Adjei-Brenyah",
+		"Suggestor":"Justin",
+		"Stars":5,
+		"Timestamp":"2023-08-07T09:04:29"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"84, Charing Cross Road",
+		"Author":"Helene Hanff",
+		"Suggestor":"Me",
+		"Stars":4,
+		"Timestamp":"2023-08-07T15:58:30"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Sally Brady's Italian Adventure",
+		"Author":"Christina Lynch",
+		"Suggestor":"Me",
+		"Stars":2,
+		"Timestamp":"2023-08-07T17:03:02"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Project Hail Mary",
+		"Author":"Andy Weir",
+		"Suggestor":"Meg",
+		"Stars":5,
+		"Timestamp":"2023-08-07T23:59:05"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Bad Vibes Only: (and Other Things I Bring to the Table)",
+		"Author":"Nora McInerny",
+		"Suggestor":"Me",
+		"Stars":4,
+		"Timestamp":"2023-08-08T16:46:36"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Better Than The Movies",
+		"Author":"Lynn Painter",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-08T18:13:08"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"I’m Glad My Mom Died",
+		"Author":"Jeannette McCurdy",
+		"Suggestor":"Emma",
+		"Stars":4,
+		"Timestamp":"2023-08-10T10:19:15"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Power",
+		"Author":"Naomi Alderman",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-10T23:33:15"
+	},
+	{
+		"Reader":"Annie ",
+		"Title":"Surrender (Audiobook - A+)",
+		"Author":"Bono",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-11T14:47:31"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Romantic Comedy",
+		"Author":"Curtis Sittenfeld",
+		"Suggestor":"Ashley",
+		"Stars":4,
+		"Timestamp":"2023-08-11T15:43:59"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Nona the Ninth",
+		"Author":"Tamsyn Muir",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-12T20:23:10"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Lonely Hearts Book Club",
+		"Author":"Lucy Gilmore",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-13T15:13:10"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Bean Trees",
+		"Author":"Barbara Kingsolver",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-13T15:14:39"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"A Thousand Ships",
+		"Author":"Natalie Haynes",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-13T22:10:44"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"Wool",
+		"Author":"Hugh Howey",
+		"Suggestor":"Nah",
+		"Stars":4,
+		"Timestamp":"2023-08-14T09:21:02"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Anatomy: A Love Story ",
+		"Author":"Dana Schwartz",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-14T12:07:34"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Man Who Died Twice",
+		"Author":"Richard Osman",
+		"Suggestor":"Ashley",
+		"Stars":5,
+		"Timestamp":"2023-08-14T12:08:47"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"The Path of Daggers",
+		"Author":"Robert Jordan",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-14T22:17:34"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"People We Meet On Vacation ",
+		"Author":"Emily Henry",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-14T23:28:52"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"My grandmother askede.tontell you she's sorry",
+		"Author":"Fredrick Backman",
+		"Suggestor":"Emma, I think",
+		"Stars":4,
+		"Timestamp":"2023-08-15T18:57:44"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Poverty, By America",
+		"Author":"Matthew ",
+		"Suggestor":"N\/A",
+		"Stars":5,
+		"Timestamp":"2023-08-15T22:21:23"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Tom Lake",
+		"Author":"Ann Patchette ",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-16T13:23:08"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A House With Good Bones",
+		"Author":"T. Kingfisher",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-16T19:08:08"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Thornhedge",
+		"Author":"T. Kingfisher ",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-16T23:18:55"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Crook Manifesto",
+		"Author":"Colson Whitehead",
+		"Suggestor":"…",
+		"Stars":4,
+		"Timestamp":"2023-08-17T08:18:11"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Beautiful Creatures",
+		"Author":"Kami Garcia & Margaret Stohl ",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-08-17T17:16:19"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Actual Star",
+		"Author":"Monica Byrne",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-18T00:31:35"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The House of Fortune",
+		"Author":"Jessie Burton",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-18T17:10:01"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"A Duet with the Siren Duke",
+		"Author":"Elise Kova",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-19T17:11:48"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Crying in H Mart",
+		"Author":"Michelle Zauner",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-21T08:03:15"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Bullet That Missed",
+		"Author":"Richard Osman",
+		"Suggestor":"Ashley",
+		"Stars":5,
+		"Timestamp":"2023-08-21T12:31:38"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Wings of Fire: The Hive Queen",
+		"Author":"Tui Sutherland",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-21T16:00:53"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Hanging City",
+		"Author":"Charlie Holmberg",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-21T18:23:23"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"Payback's a Witch",
+		"Author":"Lana Harpern",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-22T09:29:39"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The House of the Spirits",
+		"Author":"Isabel Allende",
+		"Suggestor":"",
+		"Stars":5,
+		"Timestamp":"2023-08-22T14:05:27"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Shift",
+		"Author":"Hugh Howey",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-22T22:00:21"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"Shift",
+		"Author":"Hugh Howey",
+		"Suggestor":"-",
+		"Stars":4,
+		"Timestamp":"2023-08-22T22:02:18"
+	},
+	{
+		"Reader":"Mary ",
+		"Title":"This Is the Story of a Happy Marriage",
+		"Author":"Ann Patchett",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-23T18:11:16"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"Demon Copperhead",
+		"Author":"Barbara Kingsolver",
+		"Suggestor":"Laura",
+		"Stars":5,
+		"Timestamp":"2023-08-24T07:47:55"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Murder of Mr. Wickham ",
+		"Author":"Claudia Gray",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-08-24T08:43:33"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"The Collected Regrets of Clover ",
+		"Author":"Mikki Brammer",
+		"Suggestor":"I recommend it!",
+		"Stars":3,
+		"Timestamp":"2023-08-24T09:15:22"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"Love on the Brain",
+		"Author":"Ali Hazelwood",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-24T19:44:28"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"Love, Theoretically ",
+		"Author":"Ali Hazelwood",
+		"Suggestor":"Meg",
+		"Stars":4,
+		"Timestamp":"2023-08-24T19:45:49"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"Quietly Hostile",
+		"Author":"Samantha Irby",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-24T19:46:37"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Cora action Year",
+		"Author":"Jennifer Robson",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-08-25T08:31:20"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Weyward ",
+		"Author":"Emilia Hart",
+		"Suggestor":"Stephanie?",
+		"Stars":4,
+		"Timestamp":"2023-08-25T21:53:30"
+	},
+	{
+		"Reader":"Emily ",
+		"Title":"Hello Beautiful ",
+		"Author":"Ann Napolitano",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-26T11:47:22"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Pageboy",
+		"Author":"Elliot Page",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-27T10:30:14"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"From Bad to Cursed",
+		"Author":"Lana Harper ",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-27T12:27:08"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Mars Room",
+		"Author":"Rachel Kushner",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-08-28T19:25:03"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Wind in the Door",
+		"Author":"Madeleine L’engle",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-08-29T18:07:03"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Survival of the Thickest: Essays",
+		"Author":"Michelle Buteau",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-08-29T20:56:05"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Proust and the Squid",
+		"Author":"Maryanne Wolf",
+		"Suggestor":"",
+		"Stars":3,
+		"Timestamp":"2023-09-01T10:38:19"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Ruthless Elimination of Hurry: How to Stay Emotionally Healthy and Spiritually Alive in the Chaos of the Modern World",
+		"Author":"John Mark Comer",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-09-01T12:45:58"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Record of a Spaceborn Few",
+		"Author":"Becky Chambers",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-09-02T13:56:01"
+	},
+	{
+		"Reader":"Blaire ",
+		"Title":"Demon Copperhead",
+		"Author":"Barbara Kingsolver",
+		"Suggestor":"Many",
+		"Stars":5,
+		"Timestamp":"2023-09-02T14:43:31"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Why Fish Don't Exist",
+		"Author":"Lulu Miller",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-09-02T15:17:13"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"A Better Man",
+		"Author":"Louise Penny",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-09-02T15:52:20"
+	},
+	{
+		"Reader":"Thomas ",
+		"Title":"The Voyage of the Dawn Treader",
+		"Author":"C.S. Lewis",
+		"Suggestor":"Laura",
+		"Stars":4,
+		"Timestamp":"2023-09-02T20:44:01"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The last word",
+		"Author":"Taylor Adams",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-09-03T06:24:45"
+	},
+	{
+		"Reader":"Cat",
+		"Title":"The Violin Conspiracy ",
+		"Author":"Brendan Slocumb",
+		"Suggestor":"",
+		"Stars":2,
+		"Timestamp":"2023-09-03T15:59:13"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Paris for One",
+		"Author":"Jojo Moyes",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-09-04T07:08:43"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Westing Game",
+		"Author":"Ellen Raskin",
+		"Suggestor":"Laura",
+		"Stars":4,
+		"Timestamp":"2023-09-04T13:26:21"
+	},
+	{
+		"Reader":"Thomas",
+		"Title":"The Westing Game",
+		"Author":"Ellen Raskin",
+		"Suggestor":"Laura",
+		"Stars":3,
+		"Timestamp":"2023-09-04T13:27:53"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"The Westing Game",
+		"Author":"Ellen Raskin",
+		"Suggestor":"Laura",
+		"Stars":3,
+		"Timestamp":"2023-09-04T13:28:23"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The Westing Game",
+		"Author":"Ellen Raskin",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-09-04T13:28:56"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Light From Uncommon Stars",
+		"Author":"Ryka Aoki",
+		"Suggestor":"",
+		"Stars":4,
+		"Timestamp":"2023-09-04T13:50:47"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"We Are the Brennans",
+		"Author":"Tracey Lange",
+		"Suggestor":"Me",
+		"Stars":3,
+		"Timestamp":"2023-09-04T16:15:57"
+	}
+]
