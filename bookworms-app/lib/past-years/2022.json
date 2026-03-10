@@ -1,0 +1,962 @@
+[
+	{
+		"Reader":"Bob",
+		"Title":"Fall of Giants",
+		"Timestamp":"2022-06-16T19:34:49"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Book Lovers, Emily Henry 377pg 5.31-6.3",
+		"Timestamp":"2022-06-16T19:37:50"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Indian Creek Chronicles: A Winter Alone In the Wilderness, Pete Fromm 208 pg 6.3-6.6",
+		"Timestamp":"2022-06-16T19:38:44"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Good Left Undone, Adriana Trigiani 439 pg 6.6-6.12",
+		"Timestamp":"2022-06-16T19:39:29"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Nettle & Bone",
+		"Timestamp":"2022-06-16T17:50:45"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Get A Life, Chloe Brown",
+		"Timestamp":"2022-06-16T17:51:32"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Stuck With You",
+		"Timestamp":"2022-06-16T17:52:11"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"The Paris Apartment",
+		"Timestamp":"2022-06-16T23:57:24"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Emergency Contact",
+		"Timestamp":"2022-06-17T09:37:27"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Sparring Partners",
+		"Timestamp":"2022-06-17T09:38:02"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Galatea",
+		"Timestamp":"2022-06-17T09:38:45"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Lincoln Highway",
+		"Timestamp":"2022-06-17T09:39:18"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Still Life",
+		"Timestamp":"2022-06-17T09:48:21"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"Song of Achilles",
+		"Timestamp":"2022-06-17T18:16:27"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"Breath",
+		"Timestamp":"2022-06-17T18:17:11"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"How to Be Perfect",
+		"Timestamp":"2022-06-17T18:17:28"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Breath th new Science of a Lost Art, James Nestor 214pg 6.15-6.18",
+		"Timestamp":"2022-06-18T19:49:12"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"The Long Way to A Small, Angry Planet",
+		"Timestamp":"2022-06-19T20:16:42"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"The Alice Network",
+		"Timestamp":"2022-06-19T20:17:23"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"A Closed and Common Orbit",
+		"Timestamp":"2022-06-19T20:18:08"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Ladyparts",
+		"Timestamp":"2022-06-20T08:47:14"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Fangirl, Rainbow Rowell 483 pg 6.12-6.20",
+		"Timestamp":"2022-06-20T19:39:04"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Ruin of Kings",
+		"Timestamp":"2022-06-20T23:38:20"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Name of All Things",
+		"Timestamp":"2022-06-20T23:38:59"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"Galatea",
+		"Timestamp":"2022-06-21T13:10:43"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"Record of a Spaceborn Few",
+		"Timestamp":"2022-06-22T07:04:00"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Polaris Rising",
+		"Timestamp":"2022-06-22T18:02:40"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"White Teeth by Zadie Smith",
+		"Timestamp":"2022-06-23T20:54:17"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Startup Wife",
+		"Timestamp":"2022-06-24T07:30:58"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Still Life",
+		"Timestamp":"2022-06-25T20:58:24"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"*A Short History of Nearly Everything",
+		"Timestamp":"2022-06-26T19:55:54"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"The Atlas Six",
+		"Timestamp":"2022-06-26T20:05:47"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Unprotected: A Memoir",
+		"Timestamp":"2022-06-28T20:50:02"
+	},
+	{
+		"Reader":"Mary ",
+		"Title":"Crying in H Mart",
+		"Timestamp":"2022-06-28T22:04:52"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"The Sum of Us: What Racism Costs Everyone and How We Can Prosper Together",
+		"Timestamp":"2022-06-29T09:25:50"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"Kitchen Confidential",
+		"Timestamp":"2022-06-29T09:28:26"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Topeka School, Ben Lerner 304 pg 6.22-6.29",
+		"Timestamp":"2022-06-29T09:30:54"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Persuasion",
+		"Timestamp":"2022-06-29T21:03:29"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Pride and Prejudice ",
+		"Timestamp":"2022-06-30T17:49:00"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Lessons in Chemistry, Bonnie Garmus 400pg 6.29-7.1",
+		"Timestamp":"2022-07-01T17:18:01"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"The Galaxy and the Ground Within",
+		"Timestamp":"2022-07-01T20:43:28"
+	},
+	{
+		"Reader":"Fielding ",
+		"Title":"Mary Jane",
+		"Timestamp":"2022-07-02T13:08:20"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"There There by Tommy Orange",
+		"Timestamp":"2022-07-02T19:52:35"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Three-Body Problem",
+		"Timestamp":"2022-07-03T08:39:39"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Funny You Should Ask",
+		"Timestamp":"2022-07-04T12:51:29"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Come As You Are, Emily Nagoski 400pg 6.4-7.6",
+		"Timestamp":"2022-07-06T18:38:30"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Below Zero",
+		"Timestamp":"2022-07-06T19:27:48"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Good Left Undone ",
+		"Timestamp":"2022-07-06T23:34:39"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Persuasion ",
+		"Timestamp":"2022-07-06T23:35:28"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"Breath the new science of a lost art",
+		"Timestamp":"2022-07-07T09:11:41"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"Future Home of the living god",
+		"Timestamp":"2022-07-07T09:12:39"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"Everything I Never Told You",
+		"Timestamp":"2022-07-07T12:34:02"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"The Huntress",
+		"Timestamp":"2022-07-08T06:59:39"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"March ",
+		"Timestamp":"2022-07-07T16:29:11"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Horse by Geraldine Brooks",
+		"Timestamp":"2022-07-08T00:08:15"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Managing Expectations, a memoir in essay, Minnie Driver 288pg. 7.2-7.8",
+		"Timestamp":"2022-07-08T16:05:33"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Plus One Pact",
+		"Timestamp":"2022-07-08T22:37:28"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Just Jaime",
+		"Timestamp":"2022-07-09T12:12:21"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Positively Izzy",
+		"Timestamp":"2022-07-09T12:12:43"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Thea Stilton and the Phantom of the Orchestra",
+		"Timestamp":"2022-07-09T12:13:18"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"A Fatal Grace",
+		"Timestamp":"2022-07-09T15:31:14"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"The Night Circus",
+		"Timestamp":"2022-07-09T20:06:02"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Death comes for the Archbishop",
+		"Timestamp":"2022-07-09T20:06:44"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Such A Fun Age",
+		"Timestamp":"2022-07-10T10:40:52"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Nightcrawling by Leila Mottley",
+		"Timestamp":"2022-07-10T14:14:43"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Ruin of Kings",
+		"Timestamp":"2022-07-10T15:01:00"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Magic Ponies: A Twinkle of Hooves",
+		"Timestamp":"2022-07-10T15:18:48"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Be A Triangle",
+		"Timestamp":"2022-07-10T22:20:39"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"And Then I Woke Up",
+		"Timestamp":"2022-07-10T22:20:40"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"A Tale of Sorcery",
+		"Timestamp":"2022-07-11T08:24:22"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Sign For Home, Blair Fell 416pg 7.2-7.11",
+		"Timestamp":"2022-07-11T17:23:12"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Stuck On You",
+		"Timestamp":"2022-07-11T20:32:07"
+	},
+	{
+		"Reader":"Dylan",
+		"Title":"Rhythm of War",
+		"Timestamp":"2022-07-11T22:32:08"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Mary Jane",
+		"Timestamp":"2022-07-12T16:36:59"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Paladin’s Grace",
+		"Timestamp":"2022-07-13T11:41:33"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Wedding Date",
+		"Timestamp":"2022-07-14T08:22:02"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"Winter's Bone",
+		"Timestamp":"2022-07-14T11:12:56"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"River of the Gods, Genius, Courage, & betrayal in the Search for the Nile, Candace Millard 349pg. 7.11-7.15",
+		"Timestamp":"2022-07-15T13:38:43"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Book of Night",
+		"Timestamp":"2022-07-15T16:57:14"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"The House in the Cerulean Sea",
+		"Timestamp":"2022-07-15T22:58:03"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Moonlight Over Paris (The Great War #3), Jennifer Robson 352pg. 5.30-7.16",
+		"Timestamp":"2022-07-16T09:13:15"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Cloud Cuckoo Land by Anthony Doerr",
+		"Timestamp":"2022-07-16T08:37:44"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Invisible Emmie ",
+		"Timestamp":"2022-07-16T15:38:28"
+	},
+	{
+		"Reader":"Jane ",
+		"Title":"Truly Tyler",
+		"Timestamp":"2022-07-16T15:39:29"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The Song of Achilles",
+		"Timestamp":"2022-07-17T19:22:46"
+	},
+	{
+		"Reader":"Stephanie ",
+		"Title":"Hiding in Plain Sight (Sarah Kendzior)",
+		"Timestamp":"2022-07-17T21:26:41"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Hotel Nantucket, Elin Hilderbrand 416pg. 7.15-7.18",
+		"Timestamp":"2022-07-18T17:35:10"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"There There",
+		"Timestamp":"2022-07-18T23:11:28"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Memphis by Tara M Stringfellow",
+		"Timestamp":"2022-07-19T08:26:52"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"And Then I Woke Up",
+		"Timestamp":"2022-07-19T20:18:18"
+	},
+	{
+		"Reader":"Stephanie",
+		"Title":"And Then I Woke Up (Malcolm Devlin)",
+		"Timestamp":"2022-07-20T21:11:00"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"This Time Tomorrow ",
+		"Timestamp":"2022-07-20T23:28:54"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Barbizon: The Hotel That Set Women Free, Paulina Bren 336 pg.  7.18-7.21",
+		"Timestamp":"2022-07-21T15:21:25"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Assassins Apprentice ",
+		"Timestamp":"2022-07-21T17:07:34"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Broken Horses",
+		"Timestamp":"2022-07-21T22:39:38"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"White Houses",
+		"Timestamp":"2022-07-21T23:40:42"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"The Song of Achilles",
+		"Timestamp":"2022-07-22T16:30:06"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Hello Molly!",
+		"Timestamp":"2022-07-22T22:55:47"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Book Lovers",
+		"Timestamp":"2022-07-23T13:15:54"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"Cloud Cuckoo Land",
+		"Timestamp":"2022-07-23T16:57:37"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"The Invisible Life of Addie LaRue",
+		"Timestamp":"2022-07-24T18:29:34"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The Cruelest Month",
+		"Timestamp":"2022-07-25T10:03:15"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Steelheart ",
+		"Timestamp":"2022-07-25T17:11:06"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Take My Hand, Dolen Perkins-Valdez 359 pg. 7.22-7.25",
+		"Timestamp":"2022-07-25T18:05:01"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Last Flight",
+		"Timestamp":"2022-07-25T20:28:40"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Book Lovers",
+		"Timestamp":"2022-07-26T23:30:25"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Rescue Princesses: The Secret Promise",
+		"Timestamp":"2022-07-27T19:58:18"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Well Played",
+		"Timestamp":"2022-07-28T21:08:42"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"The Flight of Gemma Hardy",
+		"Timestamp":"2022-07-29T12:53:30"
+	},
+	{
+		"Reader":"Fielding",
+		"Title":"This is Your Mind on Plants",
+		"Timestamp":"2022-07-30T14:41:58"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"1491",
+		"Timestamp":"2022-07-30T18:29:28"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Tomorrow, and Tomorrow, and Tomorrow, Gabrielle Zevin 416 pg. 7.25-7.30",
+		"Timestamp":"2022-07-30T19:30:20"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"A Psalm for the Wild Built",
+		"Timestamp":"2022-07-31T15:00:07"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Well Matched",
+		"Timestamp":"2022-07-31T22:14:42"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Shuggie Bain by Douglas Stuart",
+		"Timestamp":"2022-08-01T15:21:53"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"A Prayer for the Crown Shy",
+		"Timestamp":"2022-08-01T22:24:21"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Remarkably Ruby",
+		"Timestamp":"2022-08-02T08:55:51"
+	},
+	{
+		"Reader":"Jane ",
+		"Title":"Pirate Queens",
+		"Timestamp":"2022-08-02T08:56:27"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Women and Power: A Manifesto",
+		"Timestamp":"2022-08-02T15:35:45"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Big Friendship",
+		"Timestamp":"2022-08-03T09:17:59"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Thea Stilton and the Hollywood Hoax",
+		"Timestamp":"2022-08-04T08:34:17"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Book Woman of Troublesome Creek, Kim Michele Richardson 309pg. 8.1-8.4",
+		"Timestamp":"2022-08-04T12:25:35"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Paladin’s Strength",
+		"Timestamp":"2022-08-04T18:51:44"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Rescue Princesses: The Moonlight Mystery",
+		"Timestamp":"2022-08-06T09:31:50"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"A Room of One’s Own",
+		"Timestamp":"2022-08-06T09:32:32"
+	},
+	{
+		"Reader":"Jane ",
+		"Title":"The Rescue Princesses: The Stolen Crystals",
+		"Timestamp":"2022-08-06T09:33:20"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Paladin’s Hope",
+		"Timestamp":"2022-08-06T19:58:45"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Lion, the Witch, and the Wardrobe",
+		"Timestamp":"2022-08-07T20:05:26"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Seven Husbands of Evelyn Hugo",
+		"Timestamp":"2022-08-08T19:02:22"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Clockwork Boys",
+		"Timestamp":"2022-08-08T23:06:14"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"How the Word Is Passed: A Reckoning with the History of Slavery Across America",
+		"Timestamp":"2022-08-08T23:45:42"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"The Bluest Eye",
+		"Timestamp":"2022-08-08T23:47:27"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Two Nights in Portugal by Chris Pavone",
+		"Timestamp":"2022-08-09T14:05:53"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Here for the Drama, Kate Bromley 352pg. 7.24-8.10",
+		"Timestamp":"2022-08-10T08:56:02"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"A Kind of Freedom, Margaret Wilkerson Sexton 230pg. 8.4-8.10 ",
+		"Timestamp":"2022-08-10T10:40:39"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Well Met",
+		"Timestamp":"2022-08-11T06:38:32"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Wonder Engine",
+		"Timestamp":"2022-08-11T18:43:54"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"Cult Classic, Sloane Crosley 304pg 8.10-8.12",
+		"Timestamp":"2022-08-12T23:55:40"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Swordheart ",
+		"Timestamp":"2022-08-14T00:57:12"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"The Secret Chord",
+		"Timestamp":"2022-08-14T10:30:30"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Mercury Pictures Presents by Anthony Marra",
+		"Timestamp":"2022-08-15T18:22:42"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"The Summer Place, Jennifer Weiner 432pg. 8.12-8.15",
+		"Timestamp":"2022-08-15T18:59:10"
+	},
+	{
+		"Reader":"Thomas",
+		"Title":"Klawde: Evil, Alien, Warlord Cat",
+		"Timestamp":"2022-08-16T07:57:04"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Rescue Princesses: The Snow Jewel",
+		"Timestamp":"2022-08-16T07:58:38"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Entangled Life",
+		"Timestamp":"2022-08-16T20:59:38"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"The Cartographers",
+		"Timestamp":"2022-08-16T23:00:16"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"What Moves The Dead",
+		"Timestamp":"2022-08-17T19:41:24"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Book Lovers",
+		"Timestamp":"2022-08-17T22:49:12"
+	},
+	{
+		"Reader":"Bob",
+		"Title":"Circe",
+		"Timestamp":"2022-08-18T10:07:35"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"Entangled Life by Merlin Sheldrake",
+		"Timestamp":"2022-08-18T09:15:28"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Beautiful World, Where Are You",
+		"Timestamp":"2022-08-18T10:33:12"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"Thea Stilton and the Star Castaways ",
+		"Timestamp":"2022-08-18T11:14:50"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Little Women",
+		"Timestamp":"2022-08-18T11:49:14"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Girl in His Shadow ",
+		"Timestamp":"2022-08-18T11:49:46"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Lessons in Chemistry ",
+		"Timestamp":"2022-08-18T11:50:09"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Dear Edward",
+		"Timestamp":"2022-08-18T11:50:39"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"The Fifth Season (The Broken Earth 1) ",
+		"Timestamp":"2022-08-18T11:53:17"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"The Power of Fun",
+		"Timestamp":"2022-08-18T12:48:33"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"What is the Women’s Rights Movement?",
+		"Timestamp":"2022-08-19T06:56:10"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The War of Two Queens",
+		"Timestamp":"2022-08-20T11:41:32"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Black Cake",
+		"Timestamp":"2022-08-20T11:42:01"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Sea of tranquility ",
+		"Timestamp":"2022-08-20T15:25:39"
+	},
+	{
+		"Reader":"Laura",
+		"Title":"Anatomy: A Love Story",
+		"Timestamp":"2022-08-20T22:38:47"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"All the Light We Cannot See",
+		"Timestamp":"2022-08-21T18:04:38"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"The Lincoln Highway ",
+		"Timestamp":"2022-08-21T18:07:45"
+	},
+	{
+		"Reader":"Philip",
+		"Title":"Cloud Cuckoo Land",
+		"Timestamp":"2022-08-21T18:18:52"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Olive Kitteridge, Elizabeth Strout 336pg. 8.16-8.22",
+		"Timestamp":"2022-08-22T17:08:25"
+	},
+	{
+		"Reader":"Justin",
+		"Title":"The Zoologist’s Guide to the Galaxy by Arik Kershenbaum",
+		"Timestamp":"2022-08-22T16:35:51"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"The Zoologist’s Guide to the Galaxy ",
+		"Timestamp":"2022-08-22T19:57:03"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Sea of Tranquility ",
+		"Timestamp":"2022-08-22T22:46:28"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The Rescue Princesses: The Shimmering Stone",
+		"Timestamp":"2022-08-23T20:27:04"
+	},
+	{
+		"Reader":"Mary ",
+		"Title":"All My Mother’s Lovers",
+		"Timestamp":"2022-08-24T10:17:53"
+	},
+	{
+		"Reader":"Mary",
+		"Title":"Olga Dies Dreaming ",
+		"Timestamp":"2022-08-24T10:18:22"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Love on the Brain",
+		"Timestamp":"2022-08-25T17:27:45"
+	},
+	{
+		"Reader":"Jane",
+		"Title":"The sinking of the Titanic",
+		"Timestamp":"2022-08-26T07:08:39"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"Verity ",
+		"Timestamp":"2022-08-26T11:34:18"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Love Hypothesis ",
+		"Timestamp":"2022-08-26T11:36:12"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Eric by Terry Pratchett ",
+		"Timestamp":"2022-08-26T22:11:24"
+	},
+	{
+		"Reader":"Schuster",
+		"Title":"Kindred, Octavia E. Butler 287pg. 8.23-8.27",
+		"Timestamp":"2022-08-27T10:44:06"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"State of Wonder",
+		"Timestamp":"2022-08-27T18:23:03"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Goodnight Beautiful ",
+		"Timestamp":"2022-08-28T20:04:29"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"The Obelisk Gate (The Broken Earth 2)",
+		"Timestamp":"2022-08-28T21:55:21"
+	},
+	{
+		"Reader":"Meg",
+		"Title":"Rosaline Palmer Takes The Cake",
+		"Timestamp":"2022-08-28T23:41:49"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Seven Husbands of Evelyn Hugo",
+		"Timestamp":"2022-08-29T16:03:33"
+	},
+	{
+		"Reader":"Thomas",
+		"Title":"Klawde 2: Enemies",
+		"Timestamp":"2022-08-30T06:57:34"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Turner House, Angela Flournoy 341pg. 8.27-8.30",
+		"Timestamp":"2022-08-30T11:53:03"
+	},
+	{
+		"Reader":"Emily",
+		"Title":"Gregor the Overlander",
+		"Timestamp":"2022-08-30T17:27:43"
+	},
+	{
+		"Reader":"Blaire",
+		"Title":"The Hotel Nantucket ",
+		"Timestamp":"2022-08-31T08:57:40"
+	},
+	{
+		"Reader":"Schuster ",
+		"Title":"The Sentence, Louise Erdrich 387pg. 8.30-8.31",
+		"Timestamp":"2022-08-31T12:31:56"
+	},
+	{
+		"Reader":"Catherine",
+		"Title":"Normal People",
+		"Timestamp":"2022-08-31T18:44:27"
+	},
+	{
+		"Reader":"Emma",
+		"Title":"Caste",
+		"Timestamp":"2022-08-31T21:12:38"
+	},
+	{
+		"Reader":"Annie",
+		"Title":"Broken Horses",
+		"Timestamp":"2022-08-31T22:51:57"
+	}
+]

@@ -10,11 +10,10 @@ import {
   ReferenceLine,
   CartesianGrid,
 } from "recharts";
-import type { Book } from "@/lib/types";
 import type { Milestone } from "@/lib/types";
 
 interface Props {
-  books: Book[];
+  books: { finished_on: string; title: string }[];
   startDate: Date;
   endDate: Date;
   milestones: Milestone[];
@@ -39,7 +38,7 @@ export default function ReadingTimeline({ books, startDate, endDate, milestones 
   const data: DataPoint[] = [{ date: startDate.getTime(), count: 0, title: "" }];
   sorted.forEach((book, i) => {
     data.push({
-      date: new Date(book.finished_on).getTime(),
+      date: new Date(book.finished_on).getTime() + i, // +i ms ensures unique keys when books share a date
       count: i + 1,
       title: book.title,
     });

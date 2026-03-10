@@ -1,12 +1,13 @@
 import type { Book, Milestone } from "@/lib/types";
 import { goodreadsUrl, projectDate } from "@/lib/config";
-import { CHALLENGE } from "@/lib/config";
 
 interface Props {
   milestone: Milestone;
   books: Book[]; // all books in this tier (e.g. books 1–100 for Pizza)
   currentTotal: number; // total books read across all tiers
+  startDate: Date;
   rewardImage?: string; // optional public image path
+  challengeId?: string;
 }
 
 function StarDisplay({ stars }: { stars: number | null }) {
@@ -14,13 +15,13 @@ function StarDisplay({ stars }: { stars: number | null }) {
   return <span className="text-amber-400 text-xs">{"★".repeat(stars)}</span>;
 }
 
-export default function ProgressSection({ milestone, books, currentTotal, rewardImage }: Props) {
+export default function ProgressSection({ milestone, books, currentTotal, startDate, rewardImage, challengeId }: Props) {
   const isComplete = currentTotal >= milestone.target;
   const progress = Math.min(currentTotal, milestone.target);
   const pct = Math.min((progress / milestone.target) * 100, 100);
 
   const projected = !isComplete
-    ? projectDate(milestone.target, currentTotal, CHALLENGE.startDate)
+    ? projectDate(milestone.target, currentTotal, startDate)
     : null;
 
   const completedDate = isComplete
@@ -89,7 +90,11 @@ export default function ProgressSection({ milestone, books, currentTotal, reward
                       {i + 1 + (milestone.target === 100 ? 0 : milestone.target === 150 ? 100 : milestone.target === 200 ? 150 : 200)}
                     </a>
                   </td>
-                  <td className="py-1 pr-2 text-gray-700 font-medium">{book.reader}</td>
+                  <td className="py-1 pr-2 text-gray-700 font-medium">
+                    {challengeId
+                      ? <a href={`/challenge/${challengeId}/reader/${encodeURIComponent(book.reader)}`} className="text-indigo-700 hover:underline">{book.reader}</a>
+                      : book.reader}
+                  </td>
                   <td className="py-1 pr-2">
                     <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">
                       {book.title}

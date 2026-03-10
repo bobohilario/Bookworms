@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAllBooks, insertBook } from "@/lib/db";
+import { getOpenChallenges } from "@/lib/config";
 import type { BookInsert } from "@/lib/types";
 
 export async function GET() {
@@ -8,9 +9,16 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  if (getOpenChallenges().length === 0) {
+    return NextResponse.json(
+      { error: "Submissions are closed. No challenge is currently active." },
+      { status: 403 }
+    );
+  }
+
   const body = await req.json();
 
-  const required = ["reader", "title", "author", "finished_on", "medium"];
+  const required = ["reader", "title", "author", "finished_on", "medium", "challenge_id"];
   for (const field of required) {
     if (!body[field] || String(body[field]).trim() === "") {
       return NextResponse.json({ error: `${field} is required` }, { status: 400 });
@@ -43,6 +51,7 @@ export async function POST(req: NextRequest) {
     genre: body.genre ? String(body.genre).trim() : null,
     suggestor: body.suggestor ? String(body.suggestor).trim() : null,
     comment: body.comment ? String(body.comment).trim() : null,
+    challenge_id: String(body.challenge_id),
   };
 
   const book = insertBook(insert);

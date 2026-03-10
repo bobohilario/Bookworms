@@ -1,0 +1,76 @@
+{
+  "challenges": [
+    {
+      "id": "playground",
+      "label": "Playground (test data)",
+      "startDate": "2026-01-01",
+      "endDate": "2026-11-07",
+      "milestones": [
+        { "label": "Pizza",        "emoji": "🍕", "target": 10 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 15 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 20 },
+        { "label": "Triple Bonus", "emoji": "❗",  "target": 30 }
+      ]
+    },
+    {
+      "id": "2022",
+      "label": "2022 Summer Reading Challenge",
+      "startDate": "2022-05-30",
+      "endDate": "2022-09-05",
+      "milestones": [
+        { "label": "Pizza",        "emoji": "🍕", "target": 100 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 150 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 200 },
+        { "label": "Triple Bonus", "emoji": "❗",  "target": 300 }
+      ]
+    },
+    {
+      "id": "2023",
+      "label": "2023 Summer Reading Challenge",
+      "startDate": "2023-05-29",
+      "endDate": "2023-09-04",
+      "milestones": [
+        { "label": "Pizza",        "emoji": "🍕", "target": 100 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 150 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 200 },
+        { "label": "Triple Bonus", "emoji": "❗",  "target": 300 }
+      ]
+    },
+    {
+      "id": "2024",
+      "label": "2024 Summer Reading Challenge",
+      "startDate": "2024-05-27",
+      "endDate": "2024-09-02",
+      "milestones": [
+        { "label": "Pizza",        "emoji": "🍕", "target": 100 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 150 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 200 },
+        { "label": "Triple Bonus", "emoji": "❗",  "target": 300 }
+      ]
+    },
+    {
+      "id": "2025",
+      "label": "2025 Summer Reading Challenge",
+      "startDate": "2025-05-26",
+      "endDate": "2025-09-01",
+      "milestones": [
+        { "label": "Pizza",        "emoji": "🍕", "target": 100 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 150 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 200 },
+        { "label": "Triple Bonus", "emoji": "❗",  "target": 300 }
+      ]
+    },
+    {
+      "id": "2026",
+      "label": "2026 Summer Reading Challenge",
+      "startDate": "2026-05-25",
+      "endDate": "2026-09-07",
+      "milestones": [
+        { "label": "Pizza",        "emoji": "🍕", "target": 100 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 150 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 200 },
+        { "label": "Triple Bonus", "emoji": "❗",  "target": 300 }
+      ]
+    }
+  ]
+}

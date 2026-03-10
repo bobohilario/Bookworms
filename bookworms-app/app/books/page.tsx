@@ -1,10 +1,11 @@
 import { getAllBooks } from "@/lib/db";
+import { getCurrentChallenge } from "@/lib/config";
 import BookTable from "@/components/BookTable";
 
 export const dynamic = "force-dynamic";
 
 export default function BooksPage() {
-  const books = getAllBooks();
+  const books = getAllBooks(getCurrentChallenge().id);
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">
@@ -15,12 +16,12 @@ export default function BooksPage() {
         </div>
         <div className="flex gap-3 text-sm">
           <a href="/" className="text-indigo-600 hover:underline">← Dashboard</a>
-          <a href="/submit" className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors">
+          <a href={"/submit?challenge=" + getCurrentChallenge().id} className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors">
             Add a book
           </a>
         </div>
       </div>
-      <BookTable books={books} />
+      <BookTable books={books} challengeId={getCurrentChallenge().id} />
     </main>
   );
 }

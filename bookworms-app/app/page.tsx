@@ -1,5 +1,5 @@
 import { getAllBooks } from "@/lib/db";
-import { CHALLENGE, booksPerDay } from "@/lib/config";
+import { getCurrentChallenge, isSubmissionsOpen, getPastChallenges, booksPerDay } from "@/lib/config";
 import ReadingTimeline from "@/components/ReadingTimeline";
 import ProgressSection from "@/components/ProgressSection";
 
@@ -11,10 +11,16 @@ const MILESTONE_IMAGES: Record<string, string> = {
 };
 
 export default function DashboardPage() {
-  const books = getAllBooks();
+  const cfg = getCurrentChallenge();
+  const startDate = new Date(cfg.startDate);
+  const endDate = new Date(cfg.endDate);
+  const { milestones } = cfg;
+
+  const books = getAllBooks(cfg.id);
   const total = books.length;
-  const rate = booksPerDay(total, CHALLENGE.startDate);
-  const { milestones } = CHALLENGE;
+  const rate = booksPerDay(total, startDate);
+  const submissionsOpen = isSubmissionsOpen(cfg.id);
+  const pastYears = getPastChallenges(cfg.id);
 
   // Split books into tiers: [0,100), [100,150), [150,200), [200,300)
   const tierRanges = milestones.map((m, i) => {
@@ -26,20 +32,22 @@ export default function DashboardPage() {
     <main className="max-w-3xl mx-auto px-4 py-8">
       {/* Header */}
       <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-1">
-          {CHALLENGE.year} {CHALLENGE.name}
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-1">{cfg.label}</h1>
         <p className="text-gray-500 text-sm">
-          {CHALLENGE.startDate.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
+          {startDate.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
           {" – "}
-          {CHALLENGE.endDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+          {endDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
         </p>
-        <a
-          href="/submit"
-          className="inline-block mt-4 px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
-        >
-          Add a book »
-        </a>
+        {submissionsOpen ? (
+          <a
+            href={`/submit?challenge=${cfg.id}`}
+            className="inline-block mt-4 px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
+          >
+            Add a book »
+          </a>
+        ) : (
+          <p className="mt-4 text-sm text-gray-400 italic">Submissions are closed.</p>
+        )}
       </header>
 
       {/* Stats bar */}
@@ -60,8 +68,8 @@ export default function DashboardPage() {
           <h2 className="text-base font-semibold text-gray-700 mb-3">Reading Progress</h2>
           <ReadingTimeline
             books={books}
-            startDate={CHALLENGE.startDate}
-            endDate={CHALLENGE.endDate}
+            startDate={startDate}
+            endDate={endDate}
             milestones={milestones}
           />
         </div>
@@ -75,19 +83,33 @@ export default function DashboardPage() {
             milestone={milestone}
             books={tierBooks}
             currentTotal={total}
+            startDate={startDate}
             rewardImage={MILESTONE_IMAGES[milestone.label]}
+            challengeId={cfg.id}
           />
         ))}
       </div>
 
-      {/* Links */}
-      <div className="text-center text-sm text-gray-400 space-x-3">
-        <a href="/books" className="hover:text-indigo-600">Full list »</a>
-        {CHALLENGE.pastYears.map((py) => (
-          <a key={py.year} href={py.url} target="_blank" rel="noreferrer" className="hover:text-indigo-600">
-            {py.year} »
+      {/* Footer */}
+      <div className="text-center text-sm space-y-2 mt-2">
+        <div>
+          <a href="/books" className="inline-block px-4 py-1.5 border border-indigo-300 text-indigo-600 hover:bg-indigo-50 rounded-lg font-medium transition-colors">
+            All books
           </a>
-        ))}
+        </div>
+        <div className="text-gray-400 space-x-3">
+          {pastYears.map((py) => (
+            <a key={py.year} href={py.url} className="hover:text-indigo-600">
+              {py.year} »
+            </a>
+          ))}
+          <a
+            href="/challenge/playground"
+            className="text-purple-400 hover:text-purple-600 italic"
+          >
+            playground
+          </a>
+        </div>
       </div>
     </main>
   );

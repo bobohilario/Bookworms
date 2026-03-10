@@ -1,6 +1,7 @@
 import { getBookById } from "@/lib/db";
 import { goodreadsUrl } from "@/lib/config";
 import { notFound } from "next/navigation";
+import BookActions from "@/components/BookActions";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           <Row label="Comment" value={book.comment} />
         </dl>
       </div>
+      <BookActions book={book} />
     </main>
   );
 }

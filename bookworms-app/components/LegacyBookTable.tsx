@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import type { Book } from "@/lib/types";
+import type { LegacyBook } from "@/lib/legacy";
 import { goodreadsUrl } from "@/lib/config";
 import { isKnownReader } from "@/lib/suggestor";
 
-type SortKey = keyof Book;
+type SortKey = keyof LegacyBook;
 type SortDir = "asc" | "desc";
 
 function StarDisplay({ stars }: { stars: number | null }) {
@@ -13,7 +13,7 @@ function StarDisplay({ stars }: { stars: number | null }) {
   return <span className="text-amber-500">{"★".repeat(stars)}</span>;
 }
 
-export default function BookTable({ books, challengeId }: { books: Book[]; challengeId?: string }) {
+export default function LegacyBookTable({ books, challengeId }: { books: LegacyBook[]; challengeId?: string }) {
   const [sortKey, setSortKey] = useState<SortKey>("finished_on");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [filterReader, setFilterReader] = useState("");
@@ -75,7 +75,7 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
         <table className="min-w-full divide-y divide-gray-200 text-sm">
           <thead className="bg-gray-50">
             <tr>
-              <SortHeader label="#" col="id" />
+              <th className="px-3 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">#</th>
               <SortHeader label="Reader" col="reader" />
               <SortHeader label="Title" col="title" />
               <SortHeader label="Author" col="author" />
@@ -89,16 +89,18 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
           </thead>
           <tbody className="bg-white divide-y divide-gray-100">
             {sorted.map((book, i) => (
-              <tr key={book.id} className={i % 2 === 0 ? "" : "bg-gray-50"}>
+              <tr key={i} className={i % 2 === 0 ? "" : "bg-gray-50"}>
                 <td className="px-3 py-2 text-gray-400 font-mono">
-                  <a href={`/books/${book.id}`} className="inline-block px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-200 rounded font-mono text-xs transition-colors">
-                    #{book.id}
-                  </a>
+                  {book.id != null
+                    ? <a href={`/books/${book.id}`} className="inline-block px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-200 rounded font-mono text-xs transition-colors">#{book.id}</a>
+                    : i + 1}
                 </td>
                 <td className="px-3 py-2 font-medium text-gray-900">
-                  {challengeId
-                    ? <a href={`/challenge/${challengeId}/reader/${encodeURIComponent(book.reader.trim())}`} className="text-indigo-700 hover:underline">{book.reader}</a>
-                    : book.reader}
+                  {challengeId ? (
+                    <a href={`/challenge/${challengeId}/reader/${encodeURIComponent(book.reader.trim())}`} className="text-indigo-700 hover:underline font-medium">
+                      {book.reader}
+                    </a>
+                  ) : book.reader}
                 </td>
                 <td className="px-3 py-2">
                   <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">
@@ -106,14 +108,16 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
                   </a>
                 </td>
                 <td className="px-3 py-2 text-gray-600 italic">
-                  <a href={goodreadsUrl(book.author)} target="_blank" rel="noreferrer" className="hover:underline">
-                    {book.author}
-                  </a>
+                  {book.author ? (
+                    <a href={goodreadsUrl(book.author)} target="_blank" rel="noreferrer" className="hover:underline">
+                      {book.author}
+                    </a>
+                  ) : "—"}
                 </td>
                 <td className="px-3 py-2"><StarDisplay stars={book.stars} /></td>
                 <td className="px-3 py-2 text-gray-600 whitespace-nowrap">{book.finished_on}</td>
                 <td className="px-3 py-2 text-gray-500">{book.pages ?? "—"}</td>
-                <td className="px-3 py-2 text-gray-500">{book.medium}</td>
+                <td className="px-3 py-2 text-gray-500">{book.medium ?? "—"}</td>
                 <td className="px-3 py-2 text-gray-500">
                   {book.suggestor
                     ? isKnownReader(book.suggestor, readers) && challengeId
@@ -121,12 +125,12 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
                       : book.suggestor
                     : "—"}
                 </td>
-                <td className="px-3 py-2 text-gray-500 max-w-xs truncate" title={book.comment ?? ""}>{book.comment ?? "—"}</td>
+                <td className="px-3 py-2 text-gray-500 max-w-xs truncate" title={book.comment ?? ""}>{book.comment || "—"}</td>
               </tr>
             ))}
             {sorted.length === 0 && (
               <tr>
-                <td colSpan={10} className="px-3 py-8 text-center text-gray-400">No books yet.</td>
+                <td colSpan={10} className="px-3 py-8 text-center text-gray-400">No books.</td>
               </tr>
             )}
           </tbody>

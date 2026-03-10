@@ -10,6 +10,7 @@ export interface Book {
   genre: string | null;
   suggestor: string | null;
   comment: string | null;
+  challenge_id: string;
   created_at: string;
 }
 
