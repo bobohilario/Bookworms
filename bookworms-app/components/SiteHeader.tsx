@@ -1,5 +1,4 @@
 import WormMascot from "@/components/WormMascot";
-import BookItBadge from "@/components/BookItBadge";
 
 export default function SiteHeader() {
   return (
@@ -12,7 +11,8 @@ export default function SiteHeader() {
         <div className="text-2xl font-bold tracking-wide">Shawties Bookworms</div>
         <div className="text-xs text-indigo-200 uppercase tracking-widest mt-0.5">Reading Challenge</div>
       </div>
-      <BookItBadge className="w-14 h-14 drop-shadow" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/book-it-1.svg" alt="Book It!" className="w-14 h-14 rounded-full drop-shadow" />
     </a>
   );
 }
