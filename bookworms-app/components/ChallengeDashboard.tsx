@@ -30,8 +30,31 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
 
   const now = new Date();
   const hasEnded = config.endDate < now;
+  const notStarted = config.startDate > now;
   const referenceDate = hasEnded ? config.endDate : now;
   const rate = booksPerDay(total, config.startDate, referenceDate);
+
+  // Days stat
+  let daysValue: string;
+  let daysLabel: string;
+  if (notStarted) {
+    const d = Math.ceil((config.startDate.getTime() - now.getTime()) / 864e5);
+    daysValue = String(d);
+    daysLabel = "Days until start";
+  } else if (!hasEnded) {
+    const d = Math.ceil((config.endDate.getTime() - now.getTime()) / 864e5);
+    daysValue = String(d);
+    daysLabel = "Days remaining";
+  } else {
+    const d = Math.round((config.endDate.getTime() - config.startDate.getTime()) / 864e5);
+    daysValue = String(d);
+    daysLabel = "Days of challenge";
+  }
+
+  // Next milestone stat
+  const nextMilestone = config.milestones.find((m) => total < m.target);
+  const nextGoalValue = nextMilestone ? String(nextMilestone.target - total) : "✓";
+  const nextGoalLabel = nextMilestone ? `To ${nextMilestone.label}` : "All goals met!";
 
   const submissionsOpen = isSubmissionsOpen(challengeId);
   const currentChallenge = getCurrentChallenge();
@@ -67,22 +90,37 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
         </div>
       </header>
 
-      {/* Stats bar */}
-      <div className="bg-amber-100 border border-amber-200 rounded-xl p-5 mb-6 flex gap-8 justify-center text-center shadow-sm">
-        <div>
-          <p className="text-4xl font-bold text-amber-900">{total}</p>
-          <p className="text-sm text-amber-600 mt-1">Books read</p>
+      {/* Stats — modern dashboard cards */}
+      <div className="grid grid-cols-2 gap-3 mb-6">
+        {/* Primary card: books + rate (full width, dark) */}
+        <div className="col-span-2 bg-slate-900 rounded-xl shadow-md px-6 py-5 flex items-center justify-between text-white">
+          <div>
+            <p className="text-5xl font-bold tabular-nums">{total}</p>
+            <p className="text-slate-400 text-xs uppercase tracking-widest mt-1">Books read</p>
+          </div>
+          <div className="text-right">
+            <p className="text-3xl font-semibold tabular-nums text-slate-200">{rate.toFixed(2)}</p>
+            <p className="text-slate-400 text-xs uppercase tracking-widest mt-1">Books / day</p>
+          </div>
         </div>
-        <div>
-          <p className="text-4xl font-bold text-amber-900">{rate.toFixed(2)}</p>
-          <p className="text-sm text-amber-600 mt-1">Books per day</p>
+
+        {/* Secondary: days */}
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 text-center">
+          <p className="text-3xl font-bold text-gray-900 tabular-nums">{daysValue}</p>
+          <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">{daysLabel}</p>
+        </div>
+
+        {/* Secondary: next goal */}
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 text-center">
+          <p className="text-3xl font-bold text-gray-900 tabular-nums">{nextGoalValue}</p>
+          <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">{nextGoalLabel}</p>
         </div>
       </div>
 
       {/* Timeline chart */}
       {books.length >= 2 && (
-        <div className="bg-white border border-amber-200 rounded-xl p-5 mb-6 shadow-sm">
-          <h2 className="text-base font-semibold text-amber-900 mb-3">Reading Progress</h2>
+        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 shadow-sm">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Reading Progress</h2>
           <ReadingTimeline
             books={books}
             startDate={config.startDate}

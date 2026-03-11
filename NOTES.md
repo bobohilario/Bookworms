@@ -4,9 +4,18 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] I don't like the dark brown for the h1 header background. It's too heavy. Try that color as a frame instead and give the inside a lighter style.
+- [x] The top of the challenge page is sort of ugly. Too many light yellow colors. Make the "books read" section feel more like a modern dashboard.
 
-- [x] use the "book it" icon on the right side of the header instead of having two worms
+### New
+
+- [x] The data (specifically on playground) is still being deleted on the deployed version every time I push. Fixing this is the top priority.
+
+### Railway volume setup (manual step required)
+The Dockerfile now declares `VOLUME ["/data"]` and sets `DATA_DIR=/data` before the build.
+To make data persist on Railway you must create a volume in the dashboard:
+Railway dashboard → your service → **Volumes** tab → Add volume → mount path: `/data`
+Without that volume mount, the `/data` directory is part of the container's ephemeral filesystem.
+
 
 ## Notes
 
