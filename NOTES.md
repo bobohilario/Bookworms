@@ -2,12 +2,15 @@
 
 A place to leave notes, ideas, and tasks for future sessions.
 
+## TODO
 
-- [x] unify the challenge pages. The history and the playground pages should use the same code as the 2026 page.
-Not just redirect. Reimplement. So there is just one challenge page code source. It should work for all the challenges, using different configurations. Add properties to the configurations if you need to.
+- [x] Bug: On the challenge page the numbers start at 201 instead of 1.
 
+- [x] Create a mascot. It should be a nerdy worm. Add it to the header.
 
-- [x] Fix the display on the deployed (Railways) version. Books are being recorded, but they are not appearing on the challenge page. I can see them on the /book page. See the har file in the Logs for more information.
+### new 
+
+- [x] Bug: character encoding issue with "Mason &amp; Dixon" on the 2023 page
 
 ## Notes
 

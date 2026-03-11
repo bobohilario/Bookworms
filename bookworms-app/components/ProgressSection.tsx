@@ -16,6 +16,7 @@ interface Props {
   books: BookLike[]; // all books in this tier (e.g. books 1–100 for Pizza)
   currentTotal: number; // total books read across all tiers
   startDate: Date;
+  bookOffset: number; // 0-based index of the first book in this tier (e.g. 0, 100, 150, 200)
   rewardImage?: string; // optional public image path
   challengeId?: string;
   challengeEnded?: boolean; // if true, suppress projection for incomplete milestones
@@ -26,7 +27,7 @@ function StarDisplay({ stars }: { stars: number | null }) {
   return <span className="text-amber-400 text-xs">{"★".repeat(stars)}</span>;
 }
 
-export default function ProgressSection({ milestone, books, currentTotal, startDate, rewardImage, challengeId, challengeEnded }: Props) {
+export default function ProgressSection({ milestone, books, currentTotal, startDate, bookOffset, rewardImage, challengeId, challengeEnded }: Props) {
   const isComplete = currentTotal >= milestone.target;
   const progress = Math.min(currentTotal, milestone.target);
   const pct = Math.min((progress / milestone.target) * 100, 100);
@@ -97,7 +98,7 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
             </thead>
             <tbody className="divide-y divide-gray-50">
               {books.map((book, i) => {
-                const bookNum = i + 1 + (milestone.target === 100 ? 0 : milestone.target === 150 ? 100 : milestone.target === 200 ? 150 : 200);
+                const bookNum = bookOffset + i + 1;
                 return (
                 <tr key={book.id ?? i}>
                   <td className="py-1 pr-2">

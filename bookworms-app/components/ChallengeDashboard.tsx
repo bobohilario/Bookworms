@@ -29,7 +29,7 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
 
   const tierRanges = config.milestones.map((m, i) => {
     const prev = i === 0 ? 0 : config.milestones[i - 1].target;
-    return { milestone: m, books: books.slice(prev, m.target) };
+    return { milestone: m, books: books.slice(prev, m.target), bookOffset: prev };
   });
 
   return (
@@ -81,13 +81,14 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
 
       {/* Milestone sections */}
       <div className="flex flex-col gap-6 mb-8">
-        {tierRanges.map(({ milestone, books: tierBooks }) => (
+        {tierRanges.map(({ milestone, books: tierBooks, bookOffset }) => (
           <ProgressSection
             key={milestone.label}
             milestone={milestone}
             books={tierBooks}
             currentTotal={total}
             startDate={config.startDate}
+            bookOffset={bookOffset}
             rewardImage={MILESTONE_IMAGES[milestone.label]}
             challengeId={challengeId}
             challengeEnded={hasEnded}
