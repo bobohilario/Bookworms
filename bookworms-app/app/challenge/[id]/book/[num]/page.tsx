@@ -30,7 +30,7 @@ export default async function ChallengeBookPage({
     notFound();
   }
 
-  const { books } = getChallengeData(id);
+  const { books } = await getChallengeData(id);
   const book = books[bookNum - 1];
   if (!book) notFound();
 

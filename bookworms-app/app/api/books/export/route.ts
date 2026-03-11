@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unknown challenge" }, { status: 404 });
   }
 
-  const { books } = getChallengeData(challengeId);
+  const { books } = await getChallengeData(challengeId);
 
   if (format === "csv") {
     const headers = ["#", "reader", "title", "author", "stars", "finished_on", "pages", "medium", "genre", "suggestor", "comment"];

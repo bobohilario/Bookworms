@@ -18,7 +18,7 @@ export default async function SubmitPage({
 
   const open = isSubmissionsOpen(cfg.id);
   const backHref = challenge ? `/challenge/${challenge}` : "/";
-  const knownReaders = getKnownReaders();
+  const knownReaders = await getKnownReaders();
   const start = new Date(cfg.startDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   const end = new Date(cfg.endDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 

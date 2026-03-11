@@ -24,8 +24,8 @@ interface Props {
   isHome?: boolean;
 }
 
-export default function ChallengeDashboard({ challengeId, isHome = false }: Props) {
-  const { config, books } = getChallengeData(challengeId);
+export default async function ChallengeDashboard({ challengeId, isHome = false }: Props) {
+  const { config, books } = await getChallengeData(challengeId);
   const total = books.length;
 
   const now = new Date();

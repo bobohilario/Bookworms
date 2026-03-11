@@ -141,10 +141,10 @@ export interface ResolvedChallengeConfig {
 }
 
 /** Returns books and config for any challenge ID (year numbers or "playground"). */
-export function getChallengeData(id: string): {
+export async function getChallengeData(id: string): Promise<{
   config: ResolvedChallengeConfig;
   books: LegacyBook[];
-} {
+}> {
   const cfg = getChallengeConfig(id);
   const config: ResolvedChallengeConfig = {
     id: cfg.id,
@@ -156,9 +156,8 @@ export function getChallengeData(id: string): {
 
   let books: LegacyBook[];
   if (id === "playground") {
-    // Playground reads from the live SQLite DB so submitted books appear immediately.
-    // playground-books.json is reference/seed data only.
-    books = getAllBooks("playground").map((b) => ({
+    // Playground reads from the live DB so submitted books appear immediately.
+    books = (await getAllBooks("playground")).map((b) => ({
       id: b.id,
       reader: b.reader,
       title: b.title,
@@ -177,8 +176,8 @@ export function getChallengeData(id: string): {
     try {
       books = getLegacyBooks(year);
     } catch {
-      // No JSON file for this year — use live SQLite data
-      books = getAllBooks(id).map((b) => ({
+      // No JSON file for this year — use live DB data
+      books = (await getAllBooks(id)).map((b) => ({
         id: b.id,
         reader: b.reader,
         title: b.title,
@@ -200,11 +199,11 @@ export function getChallengeData(id: string): {
 const EXCLUDED_READERS = new Set(["car", "cat", "Dursley", "Claire", "Josh Schum", "Stephanie Herbers", "Justinf"]);
 
 /** Returns a sorted list of all unique reader names across all challenges. */
-export function getKnownReaders(): string[] {
+export async function getKnownReaders(): Promise<string[]> {
   const names = new Set<string>();
   for (const id of getAllChallengeIds()) {
     try {
-      const { books } = getChallengeData(id);
+      const { books } = await getChallengeData(id);
       for (const b of books) {
         const name = b.reader.trim();
         if (!EXCLUDED_READERS.has(name)) names.add(name);
@@ -215,14 +214,17 @@ export function getKnownReaders(): string[] {
 }
 
 /** Returns all challenge IDs where the given reader appears. */
-export function getReaderChallenges(reader: string): string[] {
+export async function getReaderChallenges(reader: string): Promise<string[]> {
   const allIds = getAllChallengeIds();
-  return allIds.filter((id) => {
-    try {
-      const { books } = getChallengeData(id);
-      return books.some((b) => b.reader.trim() === reader.trim());
-    } catch {
-      return false;
-    }
-  });
+  const results = await Promise.all(
+    allIds.map(async (id) => {
+      try {
+        const { books } = await getChallengeData(id);
+        return books.some((b) => b.reader.trim() === reader.trim()) ? id : null;
+      } catch {
+        return null;
+      }
+    })
+  );
+  return results.filter((id): id is string => id !== null);
 }

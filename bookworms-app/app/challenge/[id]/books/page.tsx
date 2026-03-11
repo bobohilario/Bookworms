@@ -19,7 +19,7 @@ export default async function ChallengeBooksPage({
     notFound();
   }
 
-  const { books } = getChallengeData(id);
+  const { books } = await getChallengeData(id);
   const submissionsOpen = isSubmissionsOpen(id);
 
   return (
