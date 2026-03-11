@@ -4,15 +4,11 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] Remove the "Summer Reading Challenge" line from above the h1 header.
+- [x] Remove "car", "cat" (lowercase), "Dursley", "Claire", "Josh Schum", "Stephanie Herbers", and "Justinf" from the autocompletes
 
-- [x] Tighten up the data dashboard section: Remove the space between the pods. Make the text a little smaller. Remove the "Reading Progress" title from the timeline plot
+- [x] the top of the bookshelf is too thin on the challenge page. It should be the same thickness as the shelves.
 
-### Railway volume setup (manual step required)
-The Dockerfile now declares `VOLUME ["/data"]` and sets `DATA_DIR=/data` before the build.
-To make data persist on Railway you must create a volume in the dashboard:
-Railway dashboard → your service → **Volumes** tab → Add volume → mount path: `/data`
-Without that volume mount, the `/data` directory is part of the container's ephemeral filesystem.
+- [x] The background of the h1 is too close to the background of the page. They clash. Make the page background lighter. Try a grayish blue for the h1 background
 
 
 ## Notes

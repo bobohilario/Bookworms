@@ -197,13 +197,18 @@ export function getChallengeData(id: string): {
   return { config, books };
 }
 
+const EXCLUDED_READERS = new Set(["car", "cat", "Dursley", "Claire", "Josh Schum", "Stephanie Herbers", "Justinf"]);
+
 /** Returns a sorted list of all unique reader names across all challenges. */
 export function getKnownReaders(): string[] {
   const names = new Set<string>();
   for (const id of getAllChallengeIds()) {
     try {
       const { books } = getChallengeData(id);
-      for (const b of books) names.add(b.reader.trim());
+      for (const b of books) {
+        const name = b.reader.trim();
+        if (!EXCLUDED_READERS.has(name)) names.add(name);
+      }
     } catch { /* skip */ }
   }
   return Array.from(names).sort();

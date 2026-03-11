@@ -66,12 +66,12 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
   });
 
   return (
-    <main className="max-w-3xl mx-auto px-4 py-8">
-      {/* Header — dark frame with light interior */}
+    <main className="max-w-3xl mx-auto px-4 py-8 bg-slate-50 min-h-screen">
+      {/* Header — dark frame with grayish-blue interior */}
       <header className="text-center mb-8 rounded-xl shadow-lg border-4 border-amber-900 bg-amber-950 p-1.5">
-        <div className="bg-amber-50 rounded-lg px-6 py-5 border border-amber-200">
-          <h1 className="text-4xl font-bold text-amber-900 mb-1">{config.label}</h1>
-          <p className="text-amber-700 text-sm">
+        <div className="bg-slate-200 rounded-lg px-6 py-5 border border-slate-300">
+          <h1 className="text-4xl font-bold text-slate-800 mb-1">{config.label}</h1>
+          <p className="text-slate-500 text-sm">
             {config.startDate.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
             {" – "}
             {config.endDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
@@ -84,7 +84,7 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
               Add a book »
             </a>
           ) : (
-            <p className="mt-4 text-sm text-amber-500 italic">Submissions are closed.</p>
+            <p className="mt-4 text-sm text-slate-400 italic">Submissions are closed.</p>
           )}
         </div>
       </header>
@@ -131,7 +131,10 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
       {/* Bookshelf — each milestone section sits on a wooden shelf */}
       <div className="rounded-xl overflow-hidden border border-amber-300 shadow-md bg-amber-950 mb-8">
         {/* Top shelf rail */}
-        <div className="h-2 bg-gradient-to-b from-amber-700 to-amber-800" />
+        <div className="h-4 bg-gradient-to-b from-amber-700 via-amber-800 to-amber-900 relative">
+          <div className="absolute inset-x-0 top-0 h-px bg-amber-600 opacity-60" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-amber-950" />
+        </div>
 
         {tierRanges.map(({ milestone, books: tierBooks, bookOffset, index }) => (
           <div key={milestone.label}>
