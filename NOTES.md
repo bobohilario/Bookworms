@@ -4,11 +4,7 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] The top of the challenge page is sort of ugly. Too many light yellow colors. Make the "books read" section feel more like a modern dashboard.
-
-### New
-
-- [x] The data (specifically on playground) is still being deleted on the deployed version every time I push. Fixing this is the top priority.
+- [x] in the footer, add a timestamp of the latest update to the code, so I quickly know when the deployment is from.
 
 ### Railway volume setup (manual step required)
 The Dockerfile now declares `VOLUME ["/data"]` and sets `DATA_DIR=/data` before the build.

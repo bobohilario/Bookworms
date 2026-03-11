@@ -30,8 +30,16 @@ export default function RootLayout({
       >
         <SiteHeader />
         {children}
-        <footer className="text-center text-xs text-gray-400 py-8 mt-4 border-t border-gray-100">
-          © {new Date().getFullYear()} Shawties Bookworms
+        <footer className="text-center text-xs text-gray-400 py-8 mt-4 border-t border-gray-100 space-y-1">
+          <p>© {new Date().getFullYear()} Shawties Bookworms</p>
+          {process.env.NEXT_PUBLIC_BUILD_TIME && (
+            <p className="text-gray-300">
+              deployed {new Date(process.env.NEXT_PUBLIC_BUILD_TIME).toLocaleString("en-US", {
+                month: "short", day: "numeric", year: "numeric",
+                hour: "numeric", minute: "2-digit", timeZoneName: "short",
+              })}
+            </p>
+          )}
         </footer>
       </body>
     </html>
