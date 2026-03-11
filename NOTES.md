@@ -4,7 +4,9 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] in the footer, add a timestamp of the latest update to the code, so I quickly know when the deployment is from.
+- [x] Remove the "Summer Reading Challenge" line from above the h1 header.
+
+- [x] Tighten up the data dashboard section: Remove the space between the pods. Make the text a little smaller. Remove the "Reading Progress" title from the timeline plot
 
 ### Railway volume setup (manual step required)
 The Dockerfile now declares `VOLUME ["/data"]` and sets `DATA_DIR=/data` before the build.

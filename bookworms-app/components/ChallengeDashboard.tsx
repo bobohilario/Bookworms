@@ -70,7 +70,6 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
       {/* Header — dark frame with light interior */}
       <header className="text-center mb-8 rounded-xl shadow-lg border-4 border-amber-900 bg-amber-950 p-1.5">
         <div className="bg-amber-50 rounded-lg px-6 py-5 border border-amber-200">
-          <p className="text-xs uppercase tracking-widest text-amber-600 mb-2">📚 Summer Reading Challenge</p>
           <h1 className="text-4xl font-bold text-amber-900 mb-1">{config.label}</h1>
           <p className="text-amber-700 text-sm">
             {config.startDate.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
@@ -91,36 +90,35 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
       </header>
 
       {/* Stats — modern dashboard cards */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-2 mb-6 rounded-xl overflow-hidden shadow-md border border-gray-200">
         {/* Primary card: books + rate (full width, dark) */}
-        <div className="col-span-2 bg-slate-900 rounded-xl shadow-md px-6 py-5 flex items-center justify-between text-white">
+        <div className="col-span-2 bg-slate-900 px-6 py-4 flex items-center justify-between text-white">
           <div>
-            <p className="text-5xl font-bold tabular-nums">{total}</p>
-            <p className="text-slate-400 text-xs uppercase tracking-widest mt-1">Books read</p>
+            <p className="text-4xl font-bold tabular-nums">{total}</p>
+            <p className="text-slate-400 text-xs uppercase tracking-widest mt-0.5">Books read</p>
           </div>
           <div className="text-right">
-            <p className="text-3xl font-semibold tabular-nums text-slate-200">{rate.toFixed(2)}</p>
-            <p className="text-slate-400 text-xs uppercase tracking-widest mt-1">Books / day</p>
+            <p className="text-2xl font-semibold tabular-nums text-slate-200">{rate.toFixed(2)}</p>
+            <p className="text-slate-400 text-xs uppercase tracking-widest mt-0.5">Books / day</p>
           </div>
         </div>
 
         {/* Secondary: days */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 text-center">
-          <p className="text-3xl font-bold text-gray-900 tabular-nums">{daysValue}</p>
-          <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">{daysLabel}</p>
+        <div className="bg-white border-t border-gray-200 p-3 text-center">
+          <p className="text-2xl font-bold text-gray-900 tabular-nums">{daysValue}</p>
+          <p className="text-xs text-gray-500 uppercase tracking-widest mt-0.5">{daysLabel}</p>
         </div>
 
         {/* Secondary: next goal */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 text-center">
-          <p className="text-3xl font-bold text-gray-900 tabular-nums">{nextGoalValue}</p>
-          <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">{nextGoalLabel}</p>
+        <div className="bg-white border-t border-l border-gray-200 p-3 text-center">
+          <p className="text-2xl font-bold text-gray-900 tabular-nums">{nextGoalValue}</p>
+          <p className="text-xs text-gray-500 uppercase tracking-widest mt-0.5">{nextGoalLabel}</p>
         </div>
       </div>
 
       {/* Timeline chart */}
       {books.length >= 2 && (
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 shadow-sm">
-          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Reading Progress</h2>
+        <div className="bg-white border border-gray-200 rounded-xl px-5 pt-4 pb-2 mb-6 shadow-sm">
           <ReadingTimeline
             books={books}
             startDate={config.startDate}
