@@ -1,13 +1,24 @@
-import type { Book, Milestone } from "@/lib/types";
+import type { Milestone } from "@/lib/types";
 import { goodreadsUrl, projectDate } from "@/lib/config";
+
+// Works with both SQLite Book (id always present) and JSON-backed LegacyBook (id optional)
+interface BookLike {
+  id?: number;
+  reader: string;
+  title: string;
+  author: string | null;
+  stars: number | null;
+  finished_on: string;
+}
 
 interface Props {
   milestone: Milestone;
-  books: Book[]; // all books in this tier (e.g. books 1–100 for Pizza)
+  books: BookLike[]; // all books in this tier (e.g. books 1–100 for Pizza)
   currentTotal: number; // total books read across all tiers
   startDate: Date;
   rewardImage?: string; // optional public image path
   challengeId?: string;
+  challengeEnded?: boolean; // if true, suppress projection for incomplete milestones
 }
 
 function StarDisplay({ stars }: { stars: number | null }) {
@@ -15,7 +26,7 @@ function StarDisplay({ stars }: { stars: number | null }) {
   return <span className="text-amber-400 text-xs">{"★".repeat(stars)}</span>;
 }
 
-export default function ProgressSection({ milestone, books, currentTotal, startDate, rewardImage, challengeId }: Props) {
+export default function ProgressSection({ milestone, books, currentTotal, startDate, rewardImage, challengeId, challengeEnded }: Props) {
   const isComplete = currentTotal >= milestone.target;
   const progress = Math.min(currentTotal, milestone.target);
   const pct = Math.min((progress / milestone.target) * 100, 100);
@@ -64,6 +75,8 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
       <p className="text-xs text-gray-400 mb-5">
         {isComplete && completedDate
           ? `Completed on ${new Date(completedDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`
+          : challengeEnded
+          ? "Challenge ended"
           : projected
           ? `Projected: ${projected.toLocaleDateString("en-US", { month: "long", day: "numeric" })}`
           : "Add some books to see projection"}
@@ -83,12 +96,20 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
-              {books.map((book, i) => (
-                <tr key={book.id}>
-                  <td className="py-1 pr-2 text-gray-400 font-mono">
-                    <a href={`/books/${book.id}`} className="hover:text-indigo-600">
-                      {i + 1 + (milestone.target === 100 ? 0 : milestone.target === 150 ? 100 : milestone.target === 200 ? 150 : 200)}
-                    </a>
+              {books.map((book, i) => {
+                const bookNum = i + 1 + (milestone.target === 100 ? 0 : milestone.target === 150 ? 100 : milestone.target === 200 ? 150 : 200);
+                return (
+                <tr key={book.id ?? i}>
+                  <td className="py-1 pr-2">
+                    {book.id !== undefined ? (
+                      <a href={`/books/${book.id}`} className="inline-block px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-200 rounded font-mono text-xs transition-colors">
+                        #{bookNum}
+                      </a>
+                    ) : (
+                      <span className="inline-block px-1.5 py-0.5 bg-gray-50 text-gray-500 border border-gray-200 rounded font-mono text-xs">
+                        #{bookNum}
+                      </span>
+                    )}
                   </td>
                   <td className="py-1 pr-2 text-gray-700 font-medium">
                     {challengeId
@@ -101,13 +122,16 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
                     </a>
                   </td>
                   <td className="py-1 pr-2 italic text-gray-500">
-                    <a href={goodreadsUrl(book.author)} target="_blank" rel="noreferrer" className="hover:underline">
-                      {book.author}
-                    </a>
+                    {book.author ? (
+                      <a href={goodreadsUrl(book.author)} target="_blank" rel="noreferrer" className="hover:underline">
+                        {book.author}
+                      </a>
+                    ) : <span>—</span>}
                   </td>
                   <td className="py-1"><StarDisplay stars={book.stars} /></td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         </div>

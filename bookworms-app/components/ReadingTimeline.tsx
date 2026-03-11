@@ -53,6 +53,12 @@ export default function ReadingTimeline({ books, startDate, endDate, milestones 
     milestones[milestones.length - 1].target * 1.1
   );
 
+  const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+  const weeklyTicks: number[] = [];
+  for (let t = startDate.getTime(); t <= endDate.getTime(); t += ONE_WEEK_MS) {
+    weeklyTicks.push(t);
+  }
+
   const milestoneColors = ["#ef4444", "#3b82f6", "#8b5cf6", "#f59e0b"];
 
   return (
@@ -64,9 +70,9 @@ export default function ReadingTimeline({ books, startDate, endDate, milestones 
           type="number"
           scale="time"
           domain={[startDate.getTime(), endDate.getTime()]}
+          ticks={weeklyTicks}
           tickFormatter={formatDate}
           tick={{ fontSize: 11 }}
-          tickCount={8}
         />
         <YAxis
           domain={[0, Math.ceil(maxY)]}
