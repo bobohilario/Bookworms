@@ -4,13 +4,10 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] Bug: On the challenge page the numbers start at 201 instead of 1.
+- [x] On the old pages, the # tiles should be links to a book page.
 
-- [x] Create a mascot. It should be a nerdy worm. Add it to the header.
+- [x] When a new submission is added, create a little animation where the worm mascot dances and says one of a dozen random phrases. Put those phrases somewhere I can easily edit them.
 
-### new 
-
-- [x] Bug: character encoding issue with "Mason &amp; Dixon" on the 2023 page
 
 ## Notes
 

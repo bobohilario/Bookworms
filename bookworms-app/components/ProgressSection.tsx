@@ -106,6 +106,10 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
                       <a href={`/books/${book.id}`} className="inline-block px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-200 rounded font-mono text-xs transition-colors">
                         #{bookNum}
                       </a>
+                    ) : challengeId ? (
+                      <a href={`/challenge/${challengeId}/book/${bookNum}`} className="inline-block px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-200 rounded font-mono text-xs transition-colors">
+                        #{bookNum}
+                      </a>
                     ) : (
                       <span className="inline-block px-1.5 py-0.5 bg-gray-50 text-gray-500 border border-gray-200 rounded font-mono text-xs">
                         #{bookNum}

@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import WormCelebration from "@/components/WormCelebration";
+import { WORM_PHRASES } from "@/config/worm-phrases";
 
 const MEDIUMS = ["Paper", "Audio", "eBook", "It's a secret", "Other"];
 
@@ -13,6 +15,11 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
   const router = useRouter();
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [celebrationPhrase, setCelebrationPhrase] = useState<string | null>(null);
+
+  const handleCelebrationDone = useCallback(() => {
+    router.push(backHref);
+  }, [router, backHref]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -43,7 +50,8 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
     });
 
     if (res.ok) {
-      router.push(backHref);
+      const phrase = WORM_PHRASES[Math.floor(Math.random() * WORM_PHRASES.length)];
+      setCelebrationPhrase(phrase);
     } else {
       const body = await res.json();
       setError(body.error ?? "Something went wrong");
@@ -53,6 +61,9 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
 
   return (
     <>
+      {celebrationPhrase && (
+        <WormCelebration phrase={celebrationPhrase} onDone={handleCelebrationDone} />
+      )}
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-5 text-sm">
           {error}
