@@ -44,25 +44,27 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
-      {/* Header — library nameplate style */}
-      <header className="text-center mb-8 bg-amber-950 text-amber-50 rounded-xl p-6 shadow-lg border-2 border-amber-700">
-        <p className="text-xs uppercase tracking-widest text-amber-400 mb-2">📚 Summer Reading Challenge</p>
-        <h1 className="text-4xl font-bold mb-1">{config.label}</h1>
-        <p className="text-amber-300 text-sm">
-          {config.startDate.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
-          {" – "}
-          {config.endDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-        </p>
-        {submissionsOpen ? (
-          <a
-            href={`/submit?challenge=${challengeId}`}
-            className="inline-block mt-4 px-5 py-2 bg-amber-500 hover:bg-amber-400 text-amber-950 rounded-lg font-bold transition-colors shadow"
-          >
-            Add a book »
-          </a>
-        ) : (
-          <p className="mt-4 text-sm text-amber-500 italic">Submissions are closed.</p>
-        )}
+      {/* Header — dark frame with light interior */}
+      <header className="text-center mb-8 rounded-xl shadow-lg border-4 border-amber-900 bg-amber-950 p-1.5">
+        <div className="bg-amber-50 rounded-lg px-6 py-5 border border-amber-200">
+          <p className="text-xs uppercase tracking-widest text-amber-600 mb-2">📚 Summer Reading Challenge</p>
+          <h1 className="text-4xl font-bold text-amber-900 mb-1">{config.label}</h1>
+          <p className="text-amber-700 text-sm">
+            {config.startDate.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
+            {" – "}
+            {config.endDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+          </p>
+          {submissionsOpen ? (
+            <a
+              href={`/submit?challenge=${challengeId}`}
+              className="inline-block mt-4 px-5 py-2 bg-amber-800 hover:bg-amber-700 text-amber-50 rounded-lg font-bold transition-colors shadow"
+            >
+              Add a book »
+            </a>
+          ) : (
+            <p className="mt-4 text-sm text-amber-500 italic">Submissions are closed.</p>
+          )}
+        </div>
       </header>
 
       {/* Stats bar */}

@@ -1,4 +1,5 @@
 import WormMascot from "@/components/WormMascot";
+import BookItBadge from "@/components/BookItBadge";
 
 export default function SiteHeader() {
   return (
@@ -11,7 +12,7 @@ export default function SiteHeader() {
         <div className="text-2xl font-bold tracking-wide">Shawties Bookworms</div>
         <div className="text-xs text-indigo-200 uppercase tracking-widest mt-0.5">Reading Challenge</div>
       </div>
-      <WormMascot className="w-14 h-14 drop-shadow scale-x-[-1]" />
+      <BookItBadge className="w-14 h-14 drop-shadow" />
     </a>
   );
 }
