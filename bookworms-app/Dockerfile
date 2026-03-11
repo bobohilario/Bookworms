@@ -19,9 +19,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-# Declare /data as a persistent volume mount point.
-# On Railway: go to your service → Volumes → add a volume mounted at /data
-# Without this, the database is wiped on every deployment.
-VOLUME ["/data"]
-
 CMD ["npm", "start"]
