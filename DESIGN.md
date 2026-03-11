@@ -144,54 +144,57 @@ https://www.goodreads.com/search?q=<url-encoded-query>&search_type=books
 
 ## 6. Tech Stack
 
-| Concern         | Choice                        |
-|-----------------|-------------------------------|
-| Framework       | Next.js 15 (App Router)       |
-| Language        | TypeScript                    |
-| Database        | SQLite via `better-sqlite3`   |
-| Styling         | Tailwind CSS                  |
-| Charts          | Recharts                      |
-| Hosting target  | Node.js PaaS or VPS (TBD)     |
+| Concern         | Choice                                        |
+|-----------------|-----------------------------------------------|
+| Framework       | Next.js (App Router)                          |
+| Language        | TypeScript                                    |
+| Database        | Turso (hosted libSQL) via `@libsql/client`    |
+| Styling         | Tailwind CSS                                  |
+| Charts          | Recharts                                      |
+| Hosting         | Vercel (serverless) + Turso (free tier)       |
 
 ---
 
 ## 7. Project Structure
 
 ```
-bookworms/
-├── app/
-│   ├── page.tsx                  # Dashboard
-│   ├── submit/
-│   │   └── page.tsx              # Submission form
-│   ├── books/
-│   │   ├── page.tsx              # Full book list
-│   │   └── [id]/page.tsx         # Single entry
-│   └── api/
-│       └── books/route.ts        # REST API
-├── components/
-│   ├── ReadingTimeline.tsx       # Recharts step chart
-│   ├── ProgressSection.tsx       # Milestone card with progress bar
-│   └── BookTable.tsx             # Sortable/filterable table
-├── lib/
-│   ├── db.ts                     # SQLite singleton + query helpers
-│   ├── config.ts                 # Challenge dates & milestones
-│   └── types.ts                  # Shared TypeScript types
-├── public/
-│   └── images/
-│       ├── pizza.png
-│       └── icecream.png
-├── data/                         # SQLite DB (gitignored, needs persistent volume)
-│   └── bookworms.db
+bookworms/                         # Repo root
+├── bookworms-app/                 # Next.js app (Vercel Root Directory)
+│   ├── app/
+│   │   ├── page.tsx               # Home → current challenge dashboard
+│   │   ├── submit/page.tsx        # Submission form
+│   │   ├── challenge/[id]/        # Per-challenge dashboard
+│   │   ├── past/[year]/           # Past-year read-only view
+│   │   └── api/books/route.ts     # REST API
+│   ├── components/
+│   │   ├── ChallengeDashboard.tsx # Shared dashboard layout
+│   │   ├── ReadingTimeline.tsx    # Recharts step chart
+│   │   ├── ProgressSection.tsx    # Milestone card with progress bar + book grid
+│   │   ├── BookTable.tsx          # Sortable/filterable table
+│   │   ├── WormMascot.tsx         # Base worm SVG mascot
+│   │   ├── WormMuscle.tsx         # Flexing worm (Double Bonus icon)
+│   │   └── WormHunked.tsx         # Jacked worm (Triple Bonus icon)
+│   ├── lib/
+│   │   ├── db.ts                  # Turso client + async query helpers
+│   │   ├── legacy.ts              # Data access (current DB + past-year JSON)
+│   │   ├── config.ts              # Challenge dates & milestones
+│   │   ├── types.ts               # Shared TypeScript types
+│   │   └── past-years/            # 2023.json, 2024.json, 2025.json
+│   ├── public/
+│   │   ├── pizza.png
+│   │   └── icecream.png
+│   └── .env.local                 # TURSO_DATABASE_URL, TURSO_AUTH_TOKEN (gitignored)
 ├── CLAUDE.md
 ├── DESIGN.md
-└── package.json
+├── NOTES.md
+└── Images/                        # Original WL project images
 ```
 
 ---
 
 ## 8. Open Questions / Future Work
 
-- **Past years**: How should historical data from 2023 and 2024 be stored/displayed? Options: migrate into the same DB with a `year` column, or keep separate DB files per year.
+- **Past years**: Historical data (2023, 2024, 2025) is stored as static JSON files in `lib/past-years/`. Could be migrated into Turso with a `challenge_id` column if write access is ever needed.
 - **Admin tools**: Should there be a way to delete or edit an entry (e.g. a password-protected admin page)?
 - **Notifications**: Should the app post to a group chat (e.g. iMessage, Discord) when a milestone is hit?
-- **Persistent volume**: Pin down the hosting choice to confirm SQLite is viable (needs a non-ephemeral filesystem).
+- **Favicon**: Worm mascot favicon is planned (see NOTES.md TODO).
