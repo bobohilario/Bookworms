@@ -18,6 +18,7 @@ interface Props {
   startDate: Date;
   bookOffset: number; // 0-based index of the first book in this tier (e.g. 0, 100, 150, 200)
   rewardImage?: string; // optional public image path
+  rewardIcon?: React.ReactNode; // optional React component (takes precedence over rewardImage)
   challengeId?: string;
   challengeEnded?: boolean; // if true, suppress projection for incomplete milestones
 }
@@ -27,7 +28,7 @@ function StarDisplay({ stars }: { stars: number | null }) {
   return <span className="text-amber-400 text-xs">{"★".repeat(stars)}</span>;
 }
 
-export default function ProgressSection({ milestone, books, currentTotal, startDate, bookOffset, rewardImage, challengeId, challengeEnded }: Props) {
+export default function ProgressSection({ milestone, books, currentTotal, startDate, bookOffset, rewardImage, rewardIcon, challengeId, challengeEnded }: Props) {
   const isComplete = currentTotal >= milestone.target;
   const progress = Math.min(currentTotal, milestone.target);
   const pct = Math.min((progress / milestone.target) * 100, 100);
@@ -44,7 +45,9 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
     <section className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
-        {rewardImage ? (
+        {rewardIcon ? (
+          <span className="w-10 h-10 flex items-center justify-center">{rewardIcon}</span>
+        ) : rewardImage ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={rewardImage} alt={milestone.label} className="w-10 h-10 object-contain" />
         ) : (

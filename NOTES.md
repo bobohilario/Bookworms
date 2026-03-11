@@ -4,11 +4,9 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] When I push a new deployment to railways, it should not wipe out the data. All the books should still be there.
+- [x] make the double bonus icon a version of the worm mascot with basic muscle arms. make the triple bonus a totally hunked out worm.
 
-- [x] All the challenges should have an "all books" link
-
-- [x] The "all books" pages should have buttons to download the data, either, both CSV and JSON should be available.
+- [x] make the overall page style a bit more fun. Try a bookshelf theme for the full challenge page.
 
 ## Notes
 
