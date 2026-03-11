@@ -4,12 +4,11 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] Remove "car", "cat" (lowercase), "Dursley", "Claire", "Josh Schum", "Stephanie Herbers", and "Justinf" from the autocompletes
+- [x] the grayish blue background should only be inside the h1 brown frame. Right now it is covering the whole body
 
-- [x] the top of the bookshelf is too thin on the challenge page. It should be the same thickness as the shelves.
+- [x] Make the "Add a book" button stand out more. It is the call to action. Make it a bright color different than the h1 frame.
 
-- [x] The background of the h1 is too close to the background of the page. They clash. Make the page background lighter. Try a grayish blue for the h1 background
-
+- [x] make the triple bonus worm even beefier. Give it legs.
 
 ## Notes
 

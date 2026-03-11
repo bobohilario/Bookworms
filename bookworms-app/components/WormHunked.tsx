@@ -3,7 +3,7 @@ export default function WormHunked({ className = "" }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 88"
+      viewBox="0 0 100 114"
       className={className}
       aria-label="Jacked worm mascot"
       role="img"
@@ -12,6 +12,22 @@ export default function WormHunked({ className = "" }: { className?: string }) {
       <circle cx="50" cy="78" r="13" fill="#a3e635" stroke="#65a30d" strokeWidth="1.5" />
       <circle cx="50" cy="60" r="13" fill="#bef264" stroke="#65a30d" strokeWidth="1.5" />
       <circle cx="50" cy="42" r="13" fill="#a3e635" stroke="#65a30d" strokeWidth="1.5" />
+
+      {/* LEFT massive leg */}
+      {/* Thigh */}
+      <line x1="44" y1="89" x2="36" y2="103" stroke="#65a30d" strokeWidth="13" strokeLinecap="round" />
+      {/* Quad bulge */}
+      <circle cx="39" cy="97" r="9" fill="#a3e635" stroke="#65a30d" strokeWidth="1.5" />
+      {/* Calf */}
+      <line x1="36" y1="103" x2="33" y2="111" stroke="#65a30d" strokeWidth="10" strokeLinecap="round" />
+      {/* Foot */}
+      <ellipse cx="30" cy="112" rx="10" ry="5" fill="#bef264" stroke="#65a30d" strokeWidth="1.5" />
+
+      {/* RIGHT massive leg */}
+      <line x1="56" y1="89" x2="64" y2="103" stroke="#65a30d" strokeWidth="13" strokeLinecap="round" />
+      <circle cx="61" cy="97" r="9" fill="#a3e635" stroke="#65a30d" strokeWidth="1.5" />
+      <line x1="64" y1="103" x2="67" y2="111" stroke="#65a30d" strokeWidth="10" strokeLinecap="round" />
+      <ellipse cx="70" cy="112" rx="10" ry="5" fill="#bef264" stroke="#65a30d" strokeWidth="1.5" />
 
       {/* Six-pack lines on mid segment */}
       <line x1="44" y1="55" x2="56" y2="55" stroke="#65a30d" strokeWidth="1" opacity="0.5" />

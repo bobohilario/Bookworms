@@ -66,7 +66,7 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
   });
 
   return (
-    <main className="max-w-3xl mx-auto px-4 py-8 bg-slate-50 min-h-screen">
+    <main className="max-w-3xl mx-auto px-4 py-8">
       {/* Header — dark frame with grayish-blue interior */}
       <header className="text-center mb-8 rounded-xl shadow-lg border-4 border-amber-900 bg-amber-950 p-1.5">
         <div className="bg-slate-200 rounded-lg px-6 py-5 border border-slate-300">
@@ -79,7 +79,7 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
           {submissionsOpen ? (
             <a
               href={`/submit?challenge=${challengeId}`}
-              className="inline-block mt-4 px-5 py-2 bg-amber-800 hover:bg-amber-700 text-amber-50 rounded-lg font-bold transition-colors shadow"
+              className="inline-block mt-4 px-6 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white rounded-lg font-bold transition-colors shadow-md text-base"
             >
               Add a book »
             </a>
