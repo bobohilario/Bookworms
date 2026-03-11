@@ -11,4 +11,10 @@ RUN npm run build
 
 EXPOSE 3000
 ENV NODE_ENV=production
+
+# DATA_DIR is where the SQLite database lives.
+# On Railway, create a persistent Volume mounted at /data and set DATA_DIR=/data
+# in the service's environment variables — otherwise data is wiped on every deploy.
+ENV DATA_DIR=/data
+
 CMD ["npm", "start"]

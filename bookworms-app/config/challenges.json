@@ -7,8 +7,8 @@
       "endDate": "2026-11-07",
       "milestones": [
         { "label": "Pizza",        "emoji": "🍕", "target": 10 },
-        { "label": "Ice Cream",    "emoji": "🍦", "target": 15 },
-        { "label": "Double Bonus", "emoji": "❓",  "target": 20 },
+        { "label": "Ice Cream",    "emoji": "🍦", "target": 14 },
+        { "label": "Double Bonus", "emoji": "❓",  "target": 23 },
         { "label": "Triple Bonus", "emoji": "❗",  "target": 30 }
       ]
     },

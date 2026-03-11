@@ -98,12 +98,11 @@ export default function ChallengeDashboard({ challengeId, isHome = false }: Prop
 
       {/* Footer nav */}
       <div className="text-center text-sm space-y-2 mt-2">
-        <div>
-          {isHome ? (
-            <a href="/books" className="inline-block px-4 py-1.5 border border-indigo-300 text-indigo-600 hover:bg-indigo-50 rounded-lg font-medium transition-colors">
-              All books
-            </a>
-          ) : (
+        <div className="flex items-center justify-center gap-3">
+          <a href={`/challenge/${challengeId}/books`} className="inline-block px-4 py-1.5 border border-indigo-300 text-indigo-600 hover:bg-indigo-50 rounded-lg font-medium transition-colors">
+            All books
+          </a>
+          {!isHome && (
             <a href="/" className="inline-block px-4 py-1.5 border border-indigo-300 text-indigo-600 hover:bg-indigo-50 rounded-lg font-medium transition-colors">
               ← {currentChallenge.label}
             </a>

@@ -4,10 +4,11 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] On the old pages, the # tiles should be links to a book page.
+- [x] When I push a new deployment to railways, it should not wipe out the data. All the books should still be there.
 
-- [x] When a new submission is added, create a little animation where the worm mascot dances and says one of a dozen random phrases. Put those phrases somewhere I can easily edit them.
+- [x] All the challenges should have an "all books" link
 
+- [x] The "all books" pages should have buttons to download the data, either, both CSV and JSON should be available.
 
 ## Notes
 

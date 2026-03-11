@@ -14,8 +14,22 @@ export default function BooksPage() {
           <h1 className="text-2xl font-bold text-gray-900">All Books</h1>
           <p className="text-sm text-gray-500">{books.length} books read so far</p>
         </div>
-        <div className="flex gap-3 text-sm">
-          <a href="/" className="text-indigo-600 hover:underline">← Dashboard</a>
+        <div className="flex gap-3 text-sm flex-wrap justify-end">
+          <a
+            href={`/api/books/export?challenge=${getCurrentChallenge().id}&format=csv`}
+            className="px-3 py-1.5 border border-gray-300 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+            download
+          >
+            ↓ CSV
+          </a>
+          <a
+            href={`/api/books/export?challenge=${getCurrentChallenge().id}&format=json`}
+            className="px-3 py-1.5 border border-gray-300 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+            download
+          >
+            ↓ JSON
+          </a>
+          <a href="/" className="text-indigo-600 hover:underline self-center">← Dashboard</a>
           <a href={"/submit?challenge=" + getCurrentChallenge().id} className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors">
             Add a book
           </a>
