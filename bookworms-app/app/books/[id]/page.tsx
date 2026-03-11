@@ -17,7 +17,7 @@ function Row({ label, value }: { label: string; value: React.ReactNode }) {
 
 export default async function EntryPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const book = getBookById(Number(id));
+  const book = await getBookById(Number(id));
   if (!book) notFound();
 
   const stars = book.stars ? "★".repeat(book.stars) : null;

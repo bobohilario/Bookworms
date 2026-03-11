@@ -9,7 +9,7 @@ export async function DELETE(
   const { id } = await params;
   const numId = Number(id);
   if (isNaN(numId)) return NextResponse.json({ error: "Invalid id" }, { status: 400 });
-  const ok = deleteBook(numId);
+  const ok = await deleteBook(numId);
   if (!ok) return NextResponse.json({ error: "Not found" }, { status: 404 });
   return new NextResponse(null, { status: 204 });
 }
@@ -22,7 +22,7 @@ export async function PATCH(
   const numId = Number(id);
   if (isNaN(numId)) return NextResponse.json({ error: "Invalid id" }, { status: 400 });
 
-  const existing = getBookById(numId);
+  const existing = await getBookById(numId);
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
   const body = await req.json();
@@ -37,6 +37,6 @@ export async function PATCH(
     }
   }
 
-  const updated = updateBook(numId, fields);
+  const updated = await updateBook(numId, fields);
   return NextResponse.json(updated);
 }

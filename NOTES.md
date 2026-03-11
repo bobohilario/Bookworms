@@ -4,11 +4,27 @@ A place to leave notes, ideas, and tasks for future sessions.
 
 ## TODO
 
-- [x] the grayish blue background should only be inside the h1 brown frame. Right now it is covering the whole body
+- [ ] make a worm favicon
 
-- [x] Make the "Add a book" button stand out more. It is the call to action. Make it a bright color different than the h1 frame.
+### Vercel + Turso migration (branch: `vercel-turso`)
 
-- [x] make the triple bonus worm even beefier. Give it legs.
+Goal: move off Railway (paid after 30 days) to Vercel (free) + Turso (free SQLite-compatible hosted DB).
+
+Steps:
+- [x] Install `@libsql/client`, remove `better-sqlite3`
+- [x] Rewrite `lib/db.ts` — replace synchronous `better-sqlite3` calls with async `@libsql/client`
+- [x] Update all callers of db functions to `await` (Server Components, API routes, `lib/legacy.ts`)
+- [x] Remove Dockerfile, railway.json (not needed for Vercel)
+- [x] Add `vercel.json` (just `{"framework":"nextjs"}` — Root Directory set to `bookworms-app` in Vercel dashboard)
+
+**Manual steps (you do these):**
+- [ ] `turso db create bookworms` then `turso db show bookworms` to get the URL
+- [ ] `turso db tokens create bookworms` to get the auth token
+- [ ] Add to `bookworms-app/.env.local`: `TURSO_DATABASE_URL=...` and `TURSO_AUTH_TOKEN=...`
+- [ ] Run schema: `turso db shell bookworms` then paste the CREATE TABLE from CLAUDE.md
+- [ ] Export data from Railway: SSH in or use Railway CLI to `sqlite3 /data/bookworms.db .dump`
+- [ ] Import into Turso: `turso db shell bookworms < dump.sql`
+- [ ] Connect repo to Vercel, set Root Directory = `bookworms-app`, add env vars, deploy
 
 ## Notes
 
@@ -16,5 +32,5 @@ A place to leave notes, ideas, and tasks for future sessions.
     - book worms
     - book shelves
     - classic Pizza Hut (building roof, red cups, etc)
-    - "Book It" reading challenge 
+    - "Book It" reading challenge
 

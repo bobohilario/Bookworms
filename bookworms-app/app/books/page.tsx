@@ -4,8 +4,8 @@ import BookTable from "@/components/BookTable";
 
 export const dynamic = "force-dynamic";
 
-export default function BooksPage() {
-  const books = getAllBooks(getCurrentChallenge().id);
+export default async function BooksPage() {
+  const books = await getAllBooks(getCurrentChallenge().id);
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">

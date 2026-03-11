@@ -17,7 +17,7 @@ export default async function ReaderPage({
 
   let data;
   try {
-    data = getChallengeData(id);
+    data = await getChallengeData(id);
   } catch {
     notFound();
   }
@@ -27,7 +27,7 @@ export default async function ReaderPage({
 
   if (readerBooks.length === 0) notFound();
 
-  const otherChallengeIds = getReaderChallenges(reader).filter((cid) => cid !== id);
+  const otherChallengeIds = (await getReaderChallenges(reader)).filter((cid) => cid !== id);
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">

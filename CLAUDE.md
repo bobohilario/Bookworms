@@ -7,40 +7,52 @@ A web-based summer reading challenge tracker for a friend group ("Shawties Bookw
 ## Tech Stack
 
 - **Framework**: Next.js (App Router)
-- **Database**: SQLite via `better-sqlite3`
+- **Database**: Turso (hosted libSQL / SQLite-compatible) via `@libsql/client`
 - **Styling**: Tailwind CSS
-- **Charts**: Recharts (or similar React-compatible charting library)
+- **Charts**: Recharts
 - **Language**: TypeScript
+- **Hosting**: Vercel (serverless) + Turso (database)
 
 ## Key Architectural Decisions
 
 - **No authentication**: The book submission form is public (anyone with the link can submit). No user accounts.
-- **SQLite**: Single-file database stored at `data/bookworms.db`. Good for self-hosted or PaaS deploys. If moving to serverless, swap for a hosted DB (e.g. Turso, PlanetScale).
+- **Turso (libSQL)**: Replaces local `better-sqlite3`. Schema is identical SQLite; queries use `@libsql/client` which is async. All db helper functions are `async`/`await`. Credentials via `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` env vars.
 - **Server Components + API Routes**: Use Next.js Server Components for read-heavy pages (dashboard, book list). Use API Routes (`/api/books`) for form submission and data mutations.
-- **No ORM**: Use `better-sqlite3` directly with typed query helpers. Keep it simple.
+- **No ORM**: Use `@libsql/client` directly with typed query helpers. Keep it simple.
 
 ## Project Structure
 
 ```
 bookworms/
-├── app/
-│   ├── page.tsx               # Dashboard / status page
-│   ├── submit/page.tsx        # Book submission form
-│   ├── books/page.tsx         # Full book list
-│   ├── books/[id]/page.tsx    # Individual book entry
-│   └── api/books/route.ts     # POST: submit a book
-├── lib/
-│   ├── db.ts                  # SQLite connection + query helpers
-│   ├── config.ts              # Challenge config (dates, milestones)
-│   └── types.ts               # Shared TypeScript types
-├── components/
-│   ├── ProgressSection.tsx    # Milestone progress bar + projected date
-│   ├── ReadingTimeline.tsx    # Step chart of cumulative books over time
-│   └── BookTable.tsx          # Sortable/filterable book list table
-├── public/
-│   └── images/                # pizza.png, icecream.png
-├── data/                      # SQLite DB lives here (gitignored)
-└── DESIGN.md
+├── bookworms-app/             # Next.js app (Vercel root directory)
+│   ├── app/
+│   │   ├── page.tsx               # Home → current challenge dashboard
+│   │   ├── submit/page.tsx        # Book submission form
+│   │   ├── challenge/[id]/        # Per-challenge dashboard
+│   │   ├── past/[year]/           # Past-year read-only view
+│   │   └── api/books/route.ts     # POST: submit a book
+│   ├── lib/
+│   │   ├── db.ts                  # Turso client + async query helpers
+│   │   ├── config.ts              # Challenge config (dates, milestones)
+│   │   ├── legacy.ts              # Data access layer (wraps db + past-year JSON)
+│   │   ├── types.ts               # Shared TypeScript types
+│   │   └── past-years/            # JSON files for 2023, 2024, 2025
+│   ├── components/
+│   │   ├── ChallengeDashboard.tsx # Main dashboard (used by home + /challenge/[id])
+│   │   ├── ProgressSection.tsx    # Milestone progress bar + book grid
+│   │   ├── ReadingTimeline.tsx    # Recharts step chart
+│   │   ├── BookTable.tsx          # Sortable/filterable book list
+│   │   ├── WormMascot.tsx         # Base worm SVG
+│   │   ├── WormMuscle.tsx         # Flexing worm (Double Bonus)
+│   │   └── WormHunked.tsx         # Jacked worm with legs (Triple Bonus)
+│   ├── public/
+│   │   ├── pizza.png              # Pizza milestone reward image
+│   │   └── icecream.png           # Ice cream milestone reward image
+│   └── .env.local                 # TURSO_DATABASE_URL, TURSO_AUTH_TOKEN (gitignored)
+├── CLAUDE.md
+├── DESIGN.md
+├── NOTES.md
+└── Images/                        # Original WL project images (reference)
 ```
 
 ## Challenge Configuration (`lib/config.ts`)
@@ -83,24 +95,26 @@ CREATE TABLE books (
 
 ## Conventions
 
-- Use `lib/db.ts` for all database access — never query SQLite directly in components.
+- Use `lib/db.ts` for all database access — never query Turso directly in components.
+- All db functions are `async` — always `await` them.
 - All dates stored as ISO strings; parse to `Date` objects only at the UI layer.
 - Goodreads search links: `https://www.goodreads.com/search?q=<encoded>&search_type=books`
 - Keep pages lean. The dashboard is the primary view — optimize it first.
 - Do not add authentication, user sessions, or role-based access. The app is intentionally open.
-- Do not use an ORM. Raw `better-sqlite3` queries with TypeScript types are sufficient.
+- Do not use an ORM. Raw `@libsql/client` queries with TypeScript types are sufficient.
 
 ## Running Locally
 
 ```bash
 npm install
+# Create bookworms-app/.env.local with:
+# TURSO_DATABASE_URL=libsql://your-db.turso.io
+# TURSO_AUTH_TOKEN=your-token
 npm run dev        # starts dev server at localhost:3000
 ```
 
-The SQLite database is auto-created on first run if `data/bookworms.db` does not exist.
-
 ## Deployment Notes
 
-- Works on any Node.js host (Railway, Fly.io, Render, VPS).
-- The `data/` directory must be on a persistent volume.
-- For Vercel/Netlify (serverless), replace SQLite with Turso or a Postgres provider.
+- **Vercel**: Deploy from the `bookworms-app/` subdirectory. Set Root Directory to `bookworms-app` in Vercel project settings. Add `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` as environment variables.
+- **Turso**: Free tier supports the app's usage. Create a database, run the schema, and optionally import existing data from Railway's SQLite file using `turso db shell`.
+- No persistent volume needed — data lives in Turso.

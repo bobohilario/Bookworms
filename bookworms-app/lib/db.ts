@@ -1,90 +1,95 @@
-import Database from "better-sqlite3";
-import path from "path";
-import fs from "fs";
+import { createClient, type Client } from "@libsql/client";
 import type { Book, BookInsert } from "./types";
 
-// On Railway, mount a volume at /data and set DATA_DIR=/data
-const DB_PATH = path.join(process.env.DATA_DIR ?? path.join(process.cwd(), "data"), "bookworms.db");
+let _client: Client | null = null;
 
-let _db: Database.Database | null = null;
-
-function getDb(): Database.Database {
-  if (_db) return _db;
-
-  // Ensure data/ directory exists
-  const dir = path.dirname(DB_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-  _db = new Database(DB_PATH);
-  _db.pragma("journal_mode = WAL");
-  migrate(_db);
-  return _db;
-}
-
-function migrate(db: Database.Database) {
-  db.exec(`
-    CREATE TABLE IF NOT EXISTS books (
-      id          INTEGER PRIMARY KEY AUTOINCREMENT,
-      reader      TEXT    NOT NULL,
-      title       TEXT    NOT NULL,
-      author      TEXT    NOT NULL,
-      finished_on TEXT    NOT NULL,
-      stars       INTEGER,
-      pages       INTEGER,
-      medium      TEXT    NOT NULL,
-      genre       TEXT,
-      suggestor   TEXT,
-      comment     TEXT,
-      created_at  TEXT    NOT NULL DEFAULT (datetime('now'))
-    )
-  `);
-  const cols = (db.pragma("table_info(books)") as { name: string }[]);
-  if (!cols.some((c) => c.name === "challenge_id")) {
-    db.exec(`ALTER TABLE books ADD COLUMN challenge_id TEXT NOT NULL DEFAULT '2026'`);
+function getClient(): Client {
+  if (!_client) {
+    const url = process.env.TURSO_DATABASE_URL;
+    if (!url) throw new Error("TURSO_DATABASE_URL is not set");
+    _client = createClient({ url, authToken: process.env.TURSO_AUTH_TOKEN });
   }
+  return _client;
 }
 
-export function getAllBooks(challengeId?: string): Book[] {
+function row(r: unknown): Book {
+  return r as Book;
+}
+
+export async function getAllBooks(challengeId?: string): Promise<Book[]> {
+  const db = getClient();
   if (challengeId) {
-    return getDb()
-      .prepare("SELECT * FROM books WHERE challenge_id = ? ORDER BY finished_on ASC, id ASC")
-      .all(challengeId) as Book[];
+    const rs = await db.execute({
+      sql: "SELECT * FROM books WHERE challenge_id = ? ORDER BY finished_on ASC, id ASC",
+      args: [challengeId],
+    });
+    return rs.rows.map(row);
   }
-  return getDb()
-    .prepare("SELECT * FROM books ORDER BY finished_on ASC, id ASC")
-    .all() as Book[];
+  const rs = await db.execute("SELECT * FROM books ORDER BY finished_on ASC, id ASC");
+  return rs.rows.map(row);
 }
 
-export function getBookById(id: number): Book | undefined {
-  return getDb()
-    .prepare("SELECT * FROM books WHERE id = ?")
-    .get(id) as Book | undefined;
+export async function getBookById(id: number): Promise<Book | undefined> {
+  const db = getClient();
+  const rs = await db.execute({ sql: "SELECT * FROM books WHERE id = ?", args: [id] });
+  return rs.rows[0] ? row(rs.rows[0]) : undefined;
 }
 
-export function insertBook(book: BookInsert): Book {
-  const db = getDb();
-  const stmt = db.prepare(`
-    INSERT INTO books (reader, title, author, finished_on, stars, pages, medium, genre, suggestor, comment, challenge_id)
-    VALUES (@reader, @title, @author, @finished_on, @stars, @pages, @medium, @genre, @suggestor, @comment, @challenge_id)
-  `);
-  const result = stmt.run(book);
-  return getBookById(result.lastInsertRowid as number)!;
+export async function insertBook(book: BookInsert): Promise<Book> {
+  const db = getClient();
+  const rs = await db.execute({
+    sql: `INSERT INTO books (reader, title, author, finished_on, stars, pages, medium, genre, suggestor, comment, challenge_id)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    args: [
+      book.reader, book.title, book.author, book.finished_on,
+      book.stars ?? null, book.pages ?? null, book.medium,
+      book.genre ?? null, book.suggestor ?? null, book.comment ?? null,
+      book.challenge_id,
+    ],
+  });
+  return (await getBookById(Number(rs.lastInsertRowid)))!;
 }
 
-export function deleteBook(id: number): boolean {
-  const result = getDb().prepare("DELETE FROM books WHERE id = ?").run(id);
-  return result.changes > 0;
+export async function deleteBook(id: number): Promise<boolean> {
+  const db = getClient();
+  const rs = await db.execute({ sql: "DELETE FROM books WHERE id = ?", args: [id] });
+  return rs.rowsAffected > 0;
 }
 
-export function updateBook(id: number, fields: Partial<BookInsert>): Book | undefined {
+export async function updateBook(id: number, fields: Partial<BookInsert>): Promise<Book | undefined> {
   const keys = Object.keys(fields) as (keyof BookInsert)[];
   if (keys.length === 0) return getBookById(id);
-  const sets = keys.map((k) => `${k} = @${k}`).join(", ");
-  getDb().prepare(`UPDATE books SET ${sets} WHERE id = @id`).run({ ...fields, id });
+  const db = getClient();
+  const sets = keys.map((k) => `${k} = ?`).join(", ");
+  const args = [...keys.map((k) => (fields[k] ?? null) as string | number | null), id];
+  await db.execute({ sql: `UPDATE books SET ${sets} WHERE id = ?`, args });
   return getBookById(id);
 }
 
-export function getBookCount(): number {
-  const row = getDb().prepare("SELECT COUNT(*) as count FROM books").get() as { count: number };
-  return row.count;
+export async function getBookCount(): Promise<number> {
+  const db = getClient();
+  const rs = await db.execute("SELECT COUNT(*) as count FROM books");
+  return Number((rs.rows[0] as unknown as { count: number }).count);
+}
+
+/** Run once to create the schema in a fresh Turso database. */
+export async function initDb(): Promise<void> {
+  const db = getClient();
+  await db.execute(`
+    CREATE TABLE IF NOT EXISTS books (
+      id           INTEGER PRIMARY KEY AUTOINCREMENT,
+      reader       TEXT    NOT NULL,
+      title        TEXT    NOT NULL,
+      author       TEXT    NOT NULL,
+      finished_on  TEXT    NOT NULL,
+      stars        INTEGER,
+      pages        INTEGER,
+      medium       TEXT    NOT NULL,
+      genre        TEXT,
+      suggestor    TEXT,
+      comment      TEXT,
+      created_at   TEXT    NOT NULL DEFAULT (datetime('now')),
+      challenge_id TEXT    NOT NULL DEFAULT '2026'
+    )
+  `);
 }

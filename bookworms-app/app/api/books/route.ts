@@ -4,7 +4,7 @@ import { getOpenChallenges } from "@/lib/config";
 import type { BookInsert } from "@/lib/types";
 
 export async function GET() {
-  const books = getAllBooks();
+  const books = await getAllBooks();
   return NextResponse.json(books);
 }
 
@@ -54,6 +54,6 @@ export async function POST(req: NextRequest) {
     challenge_id: String(body.challenge_id),
   };
 
-  const book = insertBook(insert);
+  const book = await insertBook(insert);
   return NextResponse.json(book, { status: 201 });
 }
