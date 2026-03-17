@@ -5,6 +5,16 @@ import { useRouter } from "next/navigation";
 import WormCelebration from "@/components/WormCelebration";
 import { WORM_PHRASES } from "@/config/worm-phrases";
 
+const DNF_PHRASES = [
+  "Yikes.",
+  "…Did it at least have a nice cover?",
+  "Not every book deserves to be finished.",
+  "Life is short. No regrets.",
+  "A bold choice.",
+  "The book is judging you back.",
+  "This will not go on your permanent record. Probably.",
+];
+
 const MEDIUMS = ["Paper", "Audio", "eBook", "It's a secret", "Other"];
 
 function today() {
@@ -16,6 +26,8 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [celebrationPhrase, setCelebrationPhrase] = useState<string | null>(null);
+  const [isDnf, setIsDnf] = useState(false);
+  const [dnfPhrase] = useState(() => DNF_PHRASES[Math.floor(Math.random() * DNF_PHRASES.length)]);
 
   const handleCelebrationDone = useCallback(() => {
     router.push(backHref);
@@ -41,20 +53,31 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
       suggestor: data.suggestor || null,
       comment: data.comment || null,
       challenge_id: data.challenge_id,
+      dnf: isDnf,
     };
 
-    const res = await fetch("/api/books", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    try {
+      const res = await fetch("/api/books", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    if (res.ok) {
-      const phrase = WORM_PHRASES[Math.floor(Math.random() * WORM_PHRASES.length)];
-      setCelebrationPhrase(phrase);
-    } else {
-      const body = await res.json();
-      setError(body.error ?? "Something went wrong");
+      if (res.ok) {
+        if (isDnf) {
+          router.push(backHref);
+        } else {
+          const phrase = WORM_PHRASES[Math.floor(Math.random() * WORM_PHRASES.length)];
+          setCelebrationPhrase(phrase);
+        }
+      } else {
+        let message = "Something went wrong";
+        try { message = (await res.json()).error ?? message; } catch { /* non-JSON error body */ }
+        setError(message);
+        setSubmitting(false);
+      }
+    } catch {
+      setError("Network error — please try again.");
       setSubmitting(false);
     }
   }
@@ -72,6 +95,35 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <input type="hidden" name="challenge_id" value={challengeId} />
+
+        {/* DNF checkbox */}
+        <div
+          className={`rounded-xl border-2 px-4 py-3 transition-colors ${
+            isDnf ? "border-red-400 bg-red-50" : "border-gray-200 bg-gray-50"
+          }`}
+        >
+          <label className="flex items-center gap-3 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={isDnf}
+              onChange={(e) => setIsDnf(e.target.checked)}
+              className="w-5 h-5 accent-red-500 cursor-pointer"
+            />
+            <span className={`font-semibold text-sm ${isDnf ? "text-red-700" : "text-gray-700"}`}>
+              Did Not Finish (DNF)
+            </span>
+          </label>
+          {isDnf && (
+            <div className="mt-3 flex items-start gap-3">
+              <span className="text-3xl leading-none" role="img" aria-label="disappointed">😤</span>
+              <div>
+                <p className="text-red-700 font-semibold text-sm">This book will NOT count toward the prize.</p>
+                <p className="text-red-500 text-xs mt-0.5 italic">{dnfPhrase}</p>
+              </div>
+            </div>
+          )}
+        </div>
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Reader *</label>
           <input
@@ -91,7 +143,7 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
         <Field label="Title *" name="title" required placeholder="Book title" />
         <Field label="Author *" name="author" required placeholder="Author name" />
         <Field
-          label="Finished On *"
+          label={isDnf ? "Abandoned On *" : "Finished On *"}
           name="finished_on"
           type="date"
           required
@@ -138,9 +190,13 @@ export default function SubmitForm({ challengeId, backHref, knownReaders }: { ch
         <button
           type="submit"
           disabled={submitting}
-          className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white rounded-lg font-medium transition-colors"
+          className={`w-full py-2.5 disabled:opacity-50 text-white rounded-lg font-medium transition-colors ${
+            isDnf
+              ? "bg-red-500 hover:bg-red-600"
+              : "bg-indigo-600 hover:bg-indigo-700"
+          }`}
         >
-          {submitting ? "Submitting…" : "Submit Book"}
+          {submitting ? "Submitting…" : isDnf ? "Log DNF" : "Submit Book"}
         </button>
       </form>
     </>

@@ -52,6 +52,7 @@ export async function POST(req: NextRequest) {
     suggestor: body.suggestor ? String(body.suggestor).trim() : null,
     comment: body.comment ? String(body.comment).trim() : null,
     challenge_id: String(body.challenge_id),
+    dnf: body.dnf ? 1 : 0,
   };
 
   const book = await insertBook(insert);

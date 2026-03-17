@@ -38,13 +38,13 @@ export async function getBookById(id: number): Promise<Book | undefined> {
 export async function insertBook(book: BookInsert): Promise<Book> {
   const db = getClient();
   const rs = await db.execute({
-    sql: `INSERT INTO books (reader, title, author, finished_on, stars, pages, medium, genre, suggestor, comment, challenge_id)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    sql: `INSERT INTO books (reader, title, author, finished_on, stars, pages, medium, genre, suggestor, comment, challenge_id, dnf)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     args: [
       book.reader, book.title, book.author, book.finished_on,
       book.stars ?? null, book.pages ?? null, book.medium,
       book.genre ?? null, book.suggestor ?? null, book.comment ?? null,
-      book.challenge_id,
+      book.challenge_id, book.dnf ?? 0,
     ],
   });
   return (await getBookById(Number(rs.lastInsertRowid)))!;
@@ -89,7 +89,8 @@ export async function initDb(): Promise<void> {
       suggestor    TEXT,
       comment      TEXT,
       created_at   TEXT    NOT NULL DEFAULT (datetime('now')),
-      challenge_id TEXT    NOT NULL DEFAULT '2026'
+      challenge_id TEXT    NOT NULL DEFAULT '2026',
+      dnf          INTEGER NOT NULL DEFAULT 0
     )
   `);
 }

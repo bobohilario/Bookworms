@@ -16,6 +16,7 @@ export interface LegacyBook {
   suggestor: string | null;
   comment: string | null;
   finished_on: string; // "YYYY-MM-DD"
+  dnf?: number; // 0 = finished, 1 = did not finish (absent for legacy JSON data)
 }
 
 export interface LegacyYearConfig {
@@ -169,6 +170,7 @@ export async function getChallengeData(id: string): Promise<{
       suggestor: b.suggestor,
       comment: b.comment,
       finished_on: b.finished_on,
+      dnf: b.dnf ?? 0,
     }));
   } else {
     const year = parseInt(id, 10);
@@ -189,6 +191,7 @@ export async function getChallengeData(id: string): Promise<{
         suggestor: b.suggestor,
         comment: b.comment,
         finished_on: b.finished_on,
+        dnf: b.dnf ?? 0,
       }));
     }
   }

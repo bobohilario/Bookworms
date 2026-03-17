@@ -88,32 +88,36 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-100">
-            {sorted.map((book, i) => (
-              <tr key={book.id} className={i % 2 === 0 ? "" : "bg-gray-50"}>
+            {sorted.map((book, i) => {
+              const isDnf = book.dnf === 1;
+              const rowBg = isDnf ? "bg-red-50" : i % 2 === 0 ? "" : "bg-gray-50";
+              return (
+              <tr key={book.id} className={rowBg}>
                 <td className="px-3 py-2 text-gray-400 font-mono">
-                  <a href={`/books/${book.id}`} className="inline-block px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-200 rounded font-mono text-xs transition-colors">
+                  <a href={`/books/${book.id}`} className={`inline-block px-2 py-0.5 border rounded font-mono text-xs transition-colors ${isDnf ? "bg-red-50 text-red-500 hover:bg-red-100 border-red-200" : "bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border-indigo-200"}`}>
                     #{book.id}
                   </a>
                 </td>
-                <td className="px-3 py-2 font-medium text-gray-900">
+                <td className={`px-3 py-2 font-medium ${isDnf ? "text-red-700" : "text-gray-900"}`}>
+                  {isDnf && <span className="inline-block mr-1.5 text-xs font-bold text-red-500 bg-red-100 border border-red-200 rounded px-1 py-0.5 align-middle">DNF</span>}
                   {challengeId
-                    ? <a href={`/challenge/${challengeId}/reader/${encodeURIComponent(book.reader.trim())}`} className="text-indigo-700 hover:underline">{book.reader}</a>
+                    ? <a href={`/challenge/${challengeId}/reader/${encodeURIComponent(book.reader.trim())}`} className={isDnf ? "text-red-600 hover:underline" : "text-indigo-700 hover:underline"}>{book.reader}</a>
                     : book.reader}
                 </td>
                 <td className="px-3 py-2">
-                  <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">
+                  <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className={`hover:underline ${isDnf ? "text-red-500 line-through" : "text-indigo-600"}`}>
                     {book.title}
                   </a>
                 </td>
-                <td className="px-3 py-2 text-gray-600 italic">
+                <td className={`px-3 py-2 italic ${isDnf ? "text-red-400 line-through" : "text-gray-600"}`}>
                   <a href={goodreadsUrl(book.author)} target="_blank" rel="noreferrer" className="hover:underline">
                     {book.author}
                   </a>
                 </td>
                 <td className="px-3 py-2"><StarDisplay stars={book.stars} /></td>
-                <td className="px-3 py-2 text-gray-600 whitespace-nowrap">{book.finished_on}</td>
-                <td className="px-3 py-2 text-gray-500">{book.pages ?? "—"}</td>
-                <td className="px-3 py-2 text-gray-500">{book.medium}</td>
+                <td className={`px-3 py-2 whitespace-nowrap ${isDnf ? "text-red-400" : "text-gray-600"}`}>{book.finished_on}</td>
+                <td className={`px-3 py-2 ${isDnf ? "text-red-400" : "text-gray-500"}`}>{book.pages ?? "—"}</td>
+                <td className={`px-3 py-2 ${isDnf ? "text-red-400" : "text-gray-500"}`}>{book.medium}</td>
                 <td className="px-3 py-2 text-gray-500">
                   {book.suggestor
                     ? isKnownReader(book.suggestor, readers) && challengeId
@@ -123,7 +127,8 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
                 </td>
                 <td className="px-3 py-2 text-gray-500 max-w-xs truncate" title={book.comment ?? ""}>{book.comment ?? "—"}</td>
               </tr>
-            ))}
+              );
+            })}
             {sorted.length === 0 && (
               <tr>
                 <td colSpan={10} className="px-3 py-8 text-center text-gray-400">No books yet.</td>
