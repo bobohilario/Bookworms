@@ -60,7 +60,7 @@ export default async function ReaderPage({
               <tr key={i} className={i % 2 === 0 ? "" : "bg-gray-50"}>
                 <td className="px-3 py-2 text-gray-400 font-mono">{i + 1}</td>
                 <td className="px-3 py-2">
-                  <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">
+                  <a href={`/title/${encodeURIComponent(book.title)}`} className="text-indigo-600 hover:underline">
                     {book.title}
                   </a>
                 </td>

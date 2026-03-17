@@ -125,7 +125,7 @@ export default function ProgressSection({ milestone, books, currentTotal, startD
                       : book.reader}
                   </td>
                   <td className="py-1 pr-2">
-                    <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">
+                    <a href={`/title/${encodeURIComponent(book.title)}`} className="text-indigo-600 hover:underline">
                       {book.title}
                     </a>
                   </td>
