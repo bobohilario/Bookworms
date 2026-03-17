@@ -105,7 +105,7 @@ export default function BookTable({ books, challengeId }: { books: Book[]; chall
                     : book.reader}
                 </td>
                 <td className="px-3 py-2">
-                  <a href={goodreadsUrl(book.title)} target="_blank" rel="noreferrer" className={`hover:underline ${isDnf ? "text-red-500 line-through" : "text-indigo-600"}`}>
+                  <a href={`/title/${encodeURIComponent(book.title)}`} className={`hover:underline ${isDnf ? "text-red-500 line-through" : "text-indigo-600"}`}>
                     {book.title}
                   </a>
                 </td>
