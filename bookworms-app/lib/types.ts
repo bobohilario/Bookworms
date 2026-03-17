@@ -11,6 +11,7 @@ export interface Book {
   suggestor: string | null;
   comment: string | null;
   challenge_id: string;
+  dnf: number; // 0 = finished, 1 = did not finish
   created_at: string;
 }
 

@@ -25,7 +25,9 @@ interface Props {
 }
 
 export default async function ChallengeDashboard({ challengeId, isHome = false }: Props) {
-  const { config, books } = await getChallengeData(challengeId);
+  const { config, books: allBooks } = await getChallengeData(challengeId);
+  const books = allBooks.filter((b) => !b.dnf);
+  const dnfBooks = allBooks.filter((b) => b.dnf);
   const total = books.length;
 
   const now = new Date();
@@ -164,6 +166,37 @@ export default async function ChallengeDashboard({ challengeId, isHome = false }
           </div>
         ))}
       </div>
+
+      {/* DNF section */}
+      {dnfBooks.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-sm font-semibold text-red-500 uppercase tracking-widest mb-3 flex items-center gap-2">
+            <span>😤</span> Did Not Finish ({dnfBooks.length})
+          </h2>
+          <div className="rounded-xl overflow-hidden border border-red-200 shadow-sm">
+            <table className="min-w-full divide-y divide-red-100 text-xs">
+              <thead className="bg-red-50">
+                <tr className="text-red-400 uppercase tracking-wider">
+                  <th className="px-3 py-2 text-left font-medium">Reader</th>
+                  <th className="px-3 py-2 text-left font-medium">Title</th>
+                  <th className="px-3 py-2 text-left font-medium">Author</th>
+                  <th className="px-3 py-2 text-left font-medium">Abandoned</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-red-50">
+                {dnfBooks.map((book, i) => (
+                  <tr key={book.id ?? i}>
+                    <td className="px-3 py-2 text-red-700 font-medium line-through">{book.reader}</td>
+                    <td className="px-3 py-2 text-red-600 line-through">{book.title}</td>
+                    <td className="px-3 py-2 text-red-400 italic line-through">{book.author ?? "—"}</td>
+                    <td className="px-3 py-2 text-red-400 whitespace-nowrap">{book.finished_on}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Footer nav */}
       <div className="text-center text-sm space-y-2">
